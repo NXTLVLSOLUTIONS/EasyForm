@@ -1,0 +1,47 @@
+PODS:
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Digits (2.5.0):
+    - TwitterCore (= 2.5.0)
+  - Fabric (1.6.9)
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - GooglePlaces (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - ILPDFKit (1.0.5)
+  - LGSideMenuController (1.0.10)
+  - ODSAccordionView (0.4.4)
+  - Stripe (9.0.0)
+  - TSClusterMapView (2.3.2)
+  - TwitterCore (2.5.0):
+    - Fabric
+
+DEPENDENCIES:
+  - Crashlytics
+  - Digits
+  - Fabric
+  - GoogleMaps
+  - GooglePlaces
+  - ILPDFKit
+  - LGSideMenuController (~> 1.0.0)
+  - ODSAccordionView
+  - Stripe
+  - TSClusterMapView
+
+SPEC CHECKSUMS:
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Digits: c69ee2d1a6acf728c5d159f1bd335e4882bd3225
+  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
+  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
+  GooglePlaces: 16e96266483b8010e9f275399403647978523c86
+  ILPDFKit: e208473cc97dd889c1cdf97711816be1ec64f8fe
+  LGSideMenuController: 8682bdbd0008c1acfbce95eaf96cc3657bca5f95
+  ODSAccordionView: 9635dcbd4baccaab31ef2cd689002ba4b0ffe98a
+  Stripe: 935c6deb5e96cbd29d247074bf3aa98a8438e22c
+  TSClusterMapView: 672b47a64ef9fb268a9093d80ba8b85ce2ee7afc
+  TwitterCore: 95c46af93112768a7983bd370d66023553601d01
+
+COCOAPODS: 0.39.0
