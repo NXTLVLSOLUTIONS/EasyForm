@@ -241,120 +241,126 @@
 
 }
 
--(void) formsButtonPressed
-{
-    SelectFormVC *aVCObject = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"@SelectFormNew"];
-    aVCObject.providerName.text = @"TEXTING";
-    UIView *myUIViewControllerView = aVCObject.view;
-    [myUIViewControllerView.layer setCornerRadius:10.0f];
-    myUIViewControllerView.layer.masksToBounds = YES;
-    
-    CGFloat cellHeight;
-    NSUInteger numberOfForms =   [ParseDataFormatter sharedInstance].providerFormsArray.count;
-    switch (numberOfForms) {
-        case 0:
-            cellHeight = 150;
-            break;
-        case 1:
-            cellHeight = 220;
-            break;
-        case 2:
-            cellHeight = 300;
-            break;
-        case 3:
-            cellHeight = 350;
-            break;
-
-        default:
-            break;
-    }
-    myUIViewControllerView.frame = CGRectMake(0, 0, 320.0, cellHeight);
-    
-    UIImageView *providerImage =  [[UIImageView alloc]initWithFrame:CGRectMake(25,20, 80, 80)];
-    providerImage.image = _individualProfile.image;
-    providerImage.layer.cornerRadius = providerImage.frame.size.height/2;;
-    providerImage.layer.masksToBounds = YES;
-
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 35, 158, 29)];
-    nameLabel.text = [NSString stringWithFormat:@"%@'s",_individualName.text];
-    nameLabel.font = [UIFont fontWithName:@"OpenSans-Semibold" size:16];
-    nameLabel.backgroundColor = [UIColor clearColor];
-    nameLabel.textColor = [UIColor blackColor];
-    nameLabel.textAlignment = NSTextAlignmentLeft;
-   // [nameLabel sizeToFit];
-    nameLabel.adjustsFontSizeToFitWidth = YES;
-    [myUIViewControllerView addSubview:nameLabel];
-    [myUIViewControllerView addSubview:providerImage];
-//    UIButton *button = [[UIButton alloc] init];
-//    [button setImage:[UIImage imageNamed:@"CancelTopRight"] forState:UIControlStateNormal];
-//    [button addTarget:self action:@selector(dismissButtonPressed)forControlEvents:UIControlEventTouchUpInside];
-//    [button setFrame:CGRectMake(163, 9, 20, 20)];
-//    [myUIViewControllerView addSubview:button];
-    
-    CGFloat x = 0;
-    CGFloat y = 105;
-    CGFloat width = myUIViewControllerView.frame.size.width;
-    CGFloat height = myUIViewControllerView.frame.size.height -120;
-    CGRect tableFrame = CGRectMake(x, y, width, height);
-    
-    _tableViewNew = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
-    
-    _tableViewNew.rowHeight = 50;
-    _tableViewNew.sectionFooterHeight = 22;
-    _tableViewNew.sectionHeaderHeight = 22;
-    _tableViewNew.scrollEnabled = YES;
-    _tableViewNew.showsVerticalScrollIndicator = YES;
-    _tableViewNew.userInteractionEnabled = YES;
-    _tableViewNew.bounces = YES;
-    
-    _tableViewNew.delegate = self;
-    _tableViewNew.dataSource = self;
-    
-    _tableViewNew.tableFooterView = [[UIView alloc] init];
-    _tableViewNew.backgroundColor = [UIColor whiteColor];
-    _tableViewNew.backgroundView.backgroundColor = [UIColor whiteColor];
-    
-    [myUIViewControllerView addSubview:_tableViewNew];
-    
-  /*  UIButton *button = [[UIButton alloc] init];
-    [button setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(dismissButtonPressed)forControlEvents:UIControlEventTouchUpInside];
-    [button setFrame:CGRectMake(270, 12, 20, 20)];
-    [myUIViewControllerView addSubview:button];*/
-    
-//    UIButton* RequestButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [RequestButton setFrame:CGRectMake(0, 370, 330, 49)];
-//    [RequestButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [RequestButton setTitleColor:[[RequestButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
-//    RequestButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:14];
-//    [RequestButton setTitle:@"COMPLETE FORM" forState:UIControlStateNormal];
-//    [RequestButton addTarget:self action:@selector(requestButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-//    [myUIViewControllerView addSubview:RequestButton];
-    
-//    UIButton* RequestButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [RequestButton setFrame:CGRectMake(0, 200, 200, 49)];
-//    [RequestButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-//    [RequestButton setTitleColor:[[RequestButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
-//    RequestButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:14];
-//    [RequestButton setTitle:@"Request EasyForm" forState:UIControlStateNormal];
-//    [RequestButton addTarget:self action:@selector(requestButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-//    [myUIViewControllerView addSubview:RequestButton];
-//    
-//    
-    // Show in popup
-    KLCPopupLayout layout = KLCPopupLayoutMake((KLCPopupHorizontalLayout)KLCPopupVerticalLayoutCenter,
-                                               (KLCPopupVerticalLayout)KLCPopupHorizontalLayoutCenter);
-    
-    popup = [KLCPopup popupWithContentView:myUIViewControllerView
-                                  showType:KLCPopupShowTypeBounceInFromBottom
-                               dismissType:KLCPopupDismissTypeBounceOutToBottom
-                                  maskType:KLCPopupMaskTypeDimmed
-                  dismissOnBackgroundTouch:YES
-                     dismissOnContentTouch:NO];
-    
-    
-    [popup showWithLayout:layout];
+-(void)formsButtonPressed{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Forms1" bundle:nil];
+    UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
+    [self.navigationController showViewController:viewController sender:self];
 }
+
+//-(void) formsButtonPressed
+//{
+//    SelectFormVC *aVCObject = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"@SelectFormNew"];
+//    aVCObject.providerName.text = @"TEXTING";
+//    UIView *myUIViewControllerView = aVCObject.view;
+//    [myUIViewControllerView.layer setCornerRadius:10.0f];
+//    myUIViewControllerView.layer.masksToBounds = YES;
+//    
+//    CGFloat cellHeight;
+//    NSUInteger numberOfForms =   [ParseDataFormatter sharedInstance].providerFormsArray.count;
+//    switch (numberOfForms) {
+//        case 0:
+//            cellHeight = 150;
+//            break;
+//        case 1:
+//            cellHeight = 220;
+//            break;
+//        case 2:
+//            cellHeight = 300;
+//            break;
+//        case 3:
+//            cellHeight = 350;
+//            break;
+//
+//        default:
+//            break;
+//    }
+//    myUIViewControllerView.frame = CGRectMake(0, 0, 320.0, cellHeight);
+//    
+//    UIImageView *providerImage =  [[UIImageView alloc]initWithFrame:CGRectMake(25,20, 80, 80)];
+//    providerImage.image = _individualProfile.image;
+//    providerImage.layer.cornerRadius = providerImage.frame.size.height/2;;
+//    providerImage.layer.masksToBounds = YES;
+//
+//    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 35, 158, 29)];
+//    nameLabel.text = [NSString stringWithFormat:@"%@'s",_individualName.text];
+//    nameLabel.font = [UIFont fontWithName:@"OpenSans-Semibold" size:16];
+//    nameLabel.backgroundColor = [UIColor clearColor];
+//    nameLabel.textColor = [UIColor blackColor];
+//    nameLabel.textAlignment = NSTextAlignmentLeft;
+//   // [nameLabel sizeToFit];
+//    nameLabel.adjustsFontSizeToFitWidth = YES;
+//    [myUIViewControllerView addSubview:nameLabel];
+//    [myUIViewControllerView addSubview:providerImage];
+////    UIButton *button = [[UIButton alloc] init];
+////    [button setImage:[UIImage imageNamed:@"CancelTopRight"] forState:UIControlStateNormal];
+////    [button addTarget:self action:@selector(dismissButtonPressed)forControlEvents:UIControlEventTouchUpInside];
+////    [button setFrame:CGRectMake(163, 9, 20, 20)];
+////    [myUIViewControllerView addSubview:button];
+//    
+//    CGFloat x = 0;
+//    CGFloat y = 105;
+//    CGFloat width = myUIViewControllerView.frame.size.width;
+//    CGFloat height = myUIViewControllerView.frame.size.height -120;
+//    CGRect tableFrame = CGRectMake(x, y, width, height);
+//    
+//    _tableViewNew = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
+//    
+//    _tableViewNew.rowHeight = 50;
+//    _tableViewNew.sectionFooterHeight = 22;
+//    _tableViewNew.sectionHeaderHeight = 22;
+//    _tableViewNew.scrollEnabled = YES;
+//    _tableViewNew.showsVerticalScrollIndicator = YES;
+//    _tableViewNew.userInteractionEnabled = YES;
+//    _tableViewNew.bounces = YES;
+//    
+//    _tableViewNew.delegate = self;
+//    _tableViewNew.dataSource = self;
+//    
+//    _tableViewNew.tableFooterView = [[UIView alloc] init];
+//    _tableViewNew.backgroundColor = [UIColor whiteColor];
+//    _tableViewNew.backgroundView.backgroundColor = [UIColor whiteColor];
+//    
+//    [myUIViewControllerView addSubview:_tableViewNew];
+//    
+//  /*  UIButton *button = [[UIButton alloc] init];
+//    [button setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
+//    [button addTarget:self action:@selector(dismissButtonPressed)forControlEvents:UIControlEventTouchUpInside];
+//    [button setFrame:CGRectMake(270, 12, 20, 20)];
+//    [myUIViewControllerView addSubview:button];*/
+//    
+////    UIButton* RequestButton = [UIButton buttonWithType:UIButtonTypeCustom];
+////    [RequestButton setFrame:CGRectMake(0, 370, 330, 49)];
+////    [RequestButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+////    [RequestButton setTitleColor:[[RequestButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+////    RequestButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:14];
+////    [RequestButton setTitle:@"COMPLETE FORM" forState:UIControlStateNormal];
+////    [RequestButton addTarget:self action:@selector(requestButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+////    [myUIViewControllerView addSubview:RequestButton];
+//    
+////    UIButton* RequestButton = [UIButton buttonWithType:UIButtonTypeCustom];
+////    [RequestButton setFrame:CGRectMake(0, 200, 200, 49)];
+////    [RequestButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
+////    [RequestButton setTitleColor:[[RequestButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+////    RequestButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:14];
+////    [RequestButton setTitle:@"Request EasyForm" forState:UIControlStateNormal];
+////    [RequestButton addTarget:self action:@selector(requestButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+////    [myUIViewControllerView addSubview:RequestButton];
+////    
+////    
+//    // Show in popup
+//    KLCPopupLayout layout = KLCPopupLayoutMake((KLCPopupHorizontalLayout)KLCPopupVerticalLayoutCenter,
+//                                               (KLCPopupVerticalLayout)KLCPopupHorizontalLayoutCenter);
+//    
+//    popup = [KLCPopup popupWithContentView:myUIViewControllerView
+//                                  showType:KLCPopupShowTypeBounceInFromBottom
+//                               dismissType:KLCPopupDismissTypeBounceOutToBottom
+//                                  maskType:KLCPopupMaskTypeDimmed
+//                  dismissOnBackgroundTouch:YES
+//                     dismissOnContentTouch:NO];
+//    
+//    
+//    [popup showWithLayout:layout];
+//}
 
 
 -(void)uberButtonPressed{

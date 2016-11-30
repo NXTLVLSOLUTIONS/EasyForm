@@ -211,7 +211,7 @@ class InsuranceInformationTVC2: UITableViewController {
         
         if(isSecondaryInsurance == nil){
             HUD.show(.progress)
-            delay(2.0) {
+            delay(1.0) {
                 HUD.hide()
                 let destinationViewController = UIStoryboard(name: "Forms1", bundle: nil).instantiateViewController(withIdentifier: "InsuranceVC2") as! InsuranceInformationTVC2
                 destinationViewController.isSecondaryInsurance = true
@@ -223,9 +223,9 @@ class InsuranceInformationTVC2: UITableViewController {
             HUD.show(.progress)
             
             // Now some long running task starts...
-            delay(2.0) {
+            delay(1.0) {
                 // ...and once it finishes we flash the HUD for a second.
-                HUD.flash(.success, delay: 1.0)
+                HUD.hide()
                // self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "goToHalfway", sender: self)
             }

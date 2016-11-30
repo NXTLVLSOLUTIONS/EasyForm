@@ -62,6 +62,8 @@ class PatientInformationTVC: UITableViewController {
         self.navigationItem.leftBarButtonItem = barButton
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -95,8 +97,9 @@ class PatientInformationTVC: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        UIApplication.shared.statusBarStyle = .default
+       // UIApplication.shared.statusBarStyle = .default
     }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -155,14 +158,15 @@ class PatientInformationTVC: UITableViewController {
     func saveButtonPressed(){
         
         HUD.show(.progress)
-        delay(2.0) {
+        delay(1.0) {
             HUD.hide()
             self.performSegue(withIdentifier: "pushPatientInformation", sender: self)
         }
     }
     
     func closeButtonPressed(){
-        self.dismiss(animated: true, completion: nil)
+       // self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func delay(_ delay:Double, closure:@escaping ()->()) {

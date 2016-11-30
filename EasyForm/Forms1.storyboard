@@ -191,7 +191,7 @@
         <!--Patient InformationTVC-->
         <scene sceneID="fnR-xu-2zx">
             <objects>
-                <tableViewController id="giM-5h-kjF" customClass="PatientInformationTVC" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PatientInfoVC" id="giM-5h-kjF" customClass="PatientInformationTVC" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hdU-vA-Oix">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1066,27 +1066,27 @@
                             <tableViewSection headerTitle="Visit Information" id="dTy-cH-rgL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="174" id="9dY-vW-5sA">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="174"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="174"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9dY-vW-5sA" id="bDV-kq-Fkv">
                                             <frame key="frameInset" width="375" height="173"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5b-NR-tbA">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What is the reason for your visit?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5b-NR-tbA">
                                                     <frame key="frameInset" minX="11" minY="16" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMD-QS-BqB">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Do you have any other concerns for your visit?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMD-QS-BqB">
                                                     <frame key="frameInset" minX="11" minY="67" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryS-P4-ZSq">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How is your general health?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryS-P4-ZSq">
                                                     <frame key="frameInset" minX="11" minY="118" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -1100,24 +1100,42 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Symptoms Checklist" id="SkO-6X-oGY">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="dNz-Ke-z2c">
-                                        <rect key="frame" x="0.0" y="285.5" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="52" id="dNz-Ke-z2c">
+                                        <rect key="frame" x="0.0" y="287" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dNz-Ke-z2c" id="q5Q-i4-VLV">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please check if you have any of the following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-45-dUl">
+                                                    <frame key="frameInset" minX="11" minY="15" width="323" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Allergies" id="MxB-Y5-Bvc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Exs-5z-3Pd">
-                                        <rect key="frame" x="0.0" y="385.5" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="52" id="Exs-5z-3Pd">
+                                        <rect key="frame" x="0.0" y="396" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Exs-5z-3Pd" id="dDG-Xf-3bx">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you allergic to any of the following?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-sv-1GF">
+                                                    <frame key="frameInset" minX="11" minY="15" width="323" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1125,20 +1143,20 @@
                             <tableViewSection headerTitle="Do you have any allergies" id="yZU-Kw-wHo">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="GNb-m5-2e5">
-                                        <rect key="frame" x="0.0" y="485.5" width="375" height="122"/>
+                                        <rect key="frame" x="0.0" y="505" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GNb-m5-2e5" id="3sy-qc-nac">
                                             <frame key="frameInset" width="375" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-mB-sN7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Allergy Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-mB-sN7">
                                                     <frame key="frameInset" minX="11" minY="13" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stz-5g-rV4">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reaction" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stz-5g-rV4">
                                                     <frame key="frameInset" minX="11" minY="64" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -1153,27 +1171,27 @@
                             <tableViewSection headerTitle="Current Medications" id="KFI-FT-AA2">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="181" id="Glg-9X-tXg">
-                                        <rect key="frame" x="0.0" y="663.5" width="375" height="181"/>
+                                        <rect key="frame" x="0.0" y="684" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Glg-9X-tXg" id="FKJ-KD-jQt">
                                             <frame key="frameInset" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPx-mc-yPA">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Medication Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPx-mc-yPA">
                                                     <frame key="frameInset" minX="11" minY="15" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-xE-0yW">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dosage Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-xE-0yW">
                                                     <frame key="frameInset" minX="11" minY="66" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insurance Carrier" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-vf-puL">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Frequency" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-vf-puL">
                                                     <frame key="frameInset" minX="11" minY="117" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -1188,7 +1206,7 @@
                             <tableViewSection headerTitle="Medications" id="RGr-fg-nXb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="236" id="gkq-iL-SCE">
-                                        <rect key="frame" x="0.0" y="900.5" width="375" height="236"/>
+                                        <rect key="frame" x="0.0" y="922" width="375" height="236"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gkq-iL-SCE" id="7RB-0C-exq">
                                             <frame key="frameInset" width="375" height="235"/>
@@ -1203,6 +1221,41 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qQ-LX-OI4" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
+                                                    <frame key="frameInset" minX="37" minY="62" width="300" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="thumbColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLabelColor">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedLabelColor">
+                                                            <color key="value" red="1" green="0.49803921569999998" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you take asprin or any other blood thinners?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwc-sZ-8mg">
+                                                    <frame key="frameInset" minX="37" minY="24" width="300" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1217,17 +1270,75 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
-                        <segue destination="63I-Yh-QId" kind="show" id="iWp-ZZ-G0s"/>
+                        <outlet property="allergyNameTextField" destination="dKq-mB-sN7" id="FxT-70-CXr"/>
+                        <outlet property="allergyReactionTextField" destination="stz-5g-rV4" id="zA4-gz-d5U"/>
+                        <outlet property="concernsTextField" destination="pMD-QS-BqB" id="DZU-ZL-PP1"/>
+                        <outlet property="dosageAmountTextField" destination="1hZ-xE-0yW" id="Ngd-B8-IPz"/>
+                        <outlet property="frequencyTextField" destination="Rci-vf-puL" id="L05-Mv-BdP"/>
+                        <outlet property="generalHealthTextField" destination="ryS-P4-ZSq" id="9ZF-e2-7m4"/>
+                        <outlet property="medicationNameTextField" destination="rPx-mc-yPA" id="RpM-mk-Ym2"/>
+                        <outlet property="reasonTextfield" destination="i5b-NR-tbA" id="xr4-EI-KZp"/>
+                        <outlet property="saveButton" destination="VgU-PD-Gwr" id="zDt-rI-A8t"/>
+                        <outlet property="segmentControl" destination="2qQ-LX-OI4" id="ivA-xI-R53"/>
+                        <segue destination="63I-Yh-QId" kind="show" identifier="goToDentalForm2" id="iWp-ZZ-G0s"/>
+                        <segue destination="Ff4-MY-3rg" kind="show" identifier="goToSelection" id="1Y1-GL-Ccg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96q-OP-tWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5076" y="2046"/>
+            <point key="canvasLocation" x="5189.6000000000004" y="1950.224887556222"/>
         </scene>
-        <!--Table View Controller-->
+        <!--SelectionTVC-->
+        <scene sceneID="PaM-5K-d8o">
+            <objects>
+                <tableViewController id="Ff4-MY-3rg" customClass="SelectionTVC" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="rba-gs-0co">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="selectionCell" rowHeight="60" id="9om-F1-wqm" customClass="SelectionCell" customModule="EasyForm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9om-F1-wqm" id="wrd-r2-JkF">
+                                    <frame key="frameInset" width="375" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKF-ml-IxG">
+                                            <frame key="frameInset" minX="16" minY="13" width="305" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                            <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checking (1)" translatesAutoresizingMaskIntoConstraints="NO" id="KMQ-CR-Nuq">
+                                            <frame key="frameInset" minX="328" minY="11" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkImageView" destination="KMQ-CR-Nuq" id="obK-Tb-KEe"/>
+                                    <outlet property="title" destination="GKF-ml-IxG" id="xXl-7J-o8c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ff4-MY-3rg" id="3yd-hl-vrh"/>
+                            <outlet property="delegate" destination="Ff4-MY-3rg" id="sPC-Vk-EgJ"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fh-zS-W3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6079.1999999999998" y="1033.1334332833585"/>
+        </scene>
+        <!--Dental Form2-->
         <scene sceneID="UtI-gG-rc7">
             <objects>
-                <tableViewController id="63I-Yh-QId" sceneMemberID="viewController">
+                <tableViewController id="63I-Yh-QId" customClass="DentalForm2" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="WLt-Ha-tSP">
                         <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1235,21 +1346,21 @@
                         <sections>
                             <tableViewSection headerTitle="Dental Questions" id="Ar7-Fv-Gpk">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="644" id="30I-nn-Ebf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="644" id="30I-nn-Ebf">
                                         <rect key="frame" x="0.0" y="56" width="375" height="644"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="30I-nn-Ebf" id="rLl-G8-nSO">
                                             <frame key="frameInset" width="375" height="643"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVy-ey-wUl">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Dental Exam" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVy-ey-wUl">
                                                     <frame key="frameInset" minX="11" minY="19" width="170" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Middle Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zrn-sJ-exy">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Dental X-Ray" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zrn-sJ-exy">
                                                     <frame key="frameInset" minX="194" minY="19" width="170" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -1257,21 +1368,21 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many times a day do you brush?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jt-IV-qdy">
-                                                    <frame key="frameInset" minX="11" minY="87" width="353" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="71" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many times a day do you floss?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UV5-Sn-Wxw">
-                                                    <frame key="frameInset" minX="11" minY="138" width="353" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="122" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-fG-2bH" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="11" minY="257" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="231" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1299,14 +1410,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you grind your teeth?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyd-Se-UTO">
-                                                    <frame key="frameInset" minX="11" minY="219" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="193" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isn-ZD-pTk" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="8" minY="367" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="341" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1334,14 +1445,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you ever had orthontic treatment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-PD-WoV">
-                                                    <frame key="frameInset" minX="8" minY="329" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="303" width="300" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQN-ck-w9F" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="8" minY="476" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="450" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1369,14 +1480,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you ever had peridonal treatment?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-3q-lHn">
-                                                    <frame key="frameInset" minX="8" minY="438" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="412" width="300" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nga-0G-kK8">
-                                                    <frame key="frameInset" minX="11" minY="575" width="300" height="44"/>
+                                                    <frame key="frameInset" minX="37" minY="549" width="300" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1396,17 +1507,25 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="rJD-3p-pYu" kind="show" id="2hW-J3-XGi"/>
+                        <outlet property="brushTextField" destination="3jt-IV-qdy" id="M6d-2A-YlD"/>
+                        <outlet property="flossTextField" destination="UV5-Sn-Wxw" id="B8X-DZ-7l1"/>
+                        <outlet property="lastExamTextField" destination="IVy-ey-wUl" id="snl-dB-phb"/>
+                        <outlet property="lastXrayTextField" destination="Zrn-sJ-exy" id="MtM-Bu-cbS"/>
+                        <outlet property="saveButton" destination="nga-0G-kK8" id="Z7b-Hg-fsy"/>
+                        <outlet property="segmentControl1" destination="FLx-fG-2bH" id="OQA-Rq-9dI"/>
+                        <outlet property="segmentControl2" destination="isn-ZD-pTk" id="KSi-da-n7D"/>
+                        <outlet property="segmentControl3" destination="VQN-ck-w9F" id="peg-2J-1ud"/>
+                        <segue destination="rJD-3p-pYu" kind="show" identifier="goToDentalForm3" id="2hW-J3-XGi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZ5-CZ-kME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5880.8000000000002" y="2045.577211394303"/>
+            <point key="canvasLocation" x="6032.8000000000002" y="2061.7691154422791"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Dental FormTVC3-->
         <scene sceneID="EFv-KO-qh8">
             <objects>
-                <tableViewController id="rJD-3p-pYu" sceneMemberID="viewController">
+                <tableViewController id="rJD-3p-pYu" customClass="DentalFormTVC3" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Da3-xP-7bD">
                         <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1414,15 +1533,15 @@
                         <sections>
                             <tableViewSection headerTitle="Hospitalization" id="aNJ-4b-vWA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="392" id="hmi-uz-0sn">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="392"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="372" id="hmi-uz-0sn">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="372"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hmi-uz-0sn" id="4R8-pk-czp">
-                                            <frame key="frameInset" width="375" height="391"/>
+                                            <frame key="frameInset" width="375" height="371"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gx-hh-ayk" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="20" minY="54" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="56" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1450,28 +1569,28 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you ever been hospitalized?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-WD-Cmw">
-                                                    <frame key="frameInset" minX="20" minY="16" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="18" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reason for hospitalization" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2I-hG-HwN">
-                                                    <frame key="frameInset" minX="20" minY="135" width="353" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="129" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-PB-7Aa">
-                                                    <frame key="frameInset" minX="20" minY="186" width="170" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="180" width="170" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVi-Yi-fpv" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="20" minY="301" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="286" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1499,9 +1618,9 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you ever had a blood transfusion?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-xV-BlX">
-                                                    <frame key="frameInset" minX="20" minY="263" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="248" width="300" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1512,15 +1631,32 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Do you have or currently use any listed?" id="GNJ-PO-iWc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="EVn-ju-djm">
-                                        <rect key="frame" x="0.0" y="505" width="375" height="207"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="52" id="EVn-ju-djm">
+                                        <rect key="frame" x="0.0" y="485" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EVn-ju-djm" id="3sc-xZ-ucr">
-                                            <frame key="frameInset" width="375" height="206"/>
+                                            <frame key="frameInset" width="342" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBt-nb-V4M">
-                                                    <frame key="frameInset" minX="37" minY="137" width="300" height="44"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select used products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIA-hi-r4Y">
+                                                    <frame key="frameInset" minX="20" minY="15" width="300" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="139" id="RbV-p0-psW">
+                                        <rect key="frame" x="0.0" y="537" width="375" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RbV-p0-psW" id="WIC-fM-CS5">
+                                            <frame key="frameInset" width="375" height="138"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Py-XB8">
+                                                    <frame key="frameInset" minX="37" minY="47" width="300" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1540,33 +1676,39 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="UkG-Sb-jX0" kind="show" id="8th-2d-E7t"/>
+                        <outlet property="dateTextField" destination="kiM-PB-7Aa" id="GjJ-fr-eqI"/>
+                        <outlet property="reasonTextField" destination="Y2I-hG-HwN" id="HMV-qC-Nvx"/>
+                        <outlet property="saveButton" destination="I0h-Py-XB8" id="sPw-ab-Dde"/>
+                        <outlet property="segmentControl1" destination="2Gx-hh-ayk" id="abU-Qe-VEM"/>
+                        <outlet property="segmentControl2" destination="MVi-Yi-fpv" id="sfi-Eq-fiu"/>
+                        <segue destination="UkG-Sb-jX0" kind="show" identifier="goToDentalForm4" id="8th-2d-E7t"/>
+                        <segue destination="Ff4-MY-3rg" kind="show" identifier="goToSelection" id="wdd-RV-brw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8S-8I-WNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6626.3999999999996" y="2044.6776611694154"/>
+            <point key="canvasLocation" x="6789.6000000000004" y="2061.7691154422791"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Dental FormTVC4-->
         <scene sceneID="ZoV-dZ-fX1">
             <objects>
-                <tableViewController id="UkG-Sb-jX0" sceneMemberID="viewController">
+                <tableViewController id="UkG-Sb-jX0" customClass="DentalFormTVC4" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="EZi-wz-cjf">
-                        <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="mWA-P7-sab">
+                            <tableViewSection headerTitle="Lifestyle" id="mWA-P7-sab">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1003" id="YlK-bq-xz8">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="1003"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="1309" id="YlK-bq-xz8">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="1309"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YlK-bq-xz8" id="rDm-5L-Pkp">
-                                            <frame key="frameInset" width="375" height="1002"/>
+                                            <frame key="frameInset" width="375" height="1308"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDp-dc-TP5" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="26" minY="63" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="63" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1594,21 +1736,21 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you sexually active?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-Yk-12T">
-                                                    <frame key="frameInset" minX="26" minY="25" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="25" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many sexual partners in past year?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-Do-LSC">
-                                                    <frame key="frameInset" minX="22" minY="148" width="353" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="136" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZJ-yJ-cw2" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="22" minY="247" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="247" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1636,21 +1778,21 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you drink alchohol?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F66-n5-ZVR">
-                                                    <frame key="frameInset" minX="22" minY="209" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="209" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many drinks per week?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwL-8T-J1v">
-                                                    <frame key="frameInset" minX="22" minY="323" width="353" height="43"/>
+                                                    <frame key="frameInset" minX="11" minY="323" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-za-ZVY" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="22" minY="425" width="300" height="50"/>
+                                                    <frame key="frameInset" minX="37" minY="425" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1678,19 +1820,168 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you smoke?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xti-bW-tvU">
-                                                    <frame key="frameInset" minX="22" minY="387" width="250" height="21"/>
+                                                    <frame key="frameInset" minX="37" minY="387" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many drinks per week?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovG-Oh-OE4">
-                                                    <frame key="frameInset" minX="22" minY="501" width="353" height="43"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many packs per day?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovG-Oh-OE4">
+                                                    <frame key="frameInset" minX="11" minY="501" width="353" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lF6-U7-hZL" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
+                                                    <frame key="frameInset" minX="37" minY="609" width="300" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="thumbColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLabelColor">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedLabelColor">
+                                                            <color key="value" red="1" green="0.49803921569999998" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you use recreational drugs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvI-YC-vuT">
+                                                    <frame key="frameInset" minX="37" minY="571" width="250" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What recreational drugs?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-Gn-54U">
+                                                    <frame key="frameInset" minX="11" minY="685" width="353" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many times a week?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MV1-vW-Bgr">
+                                                    <frame key="frameInset" minX="11" minY="745" width="353" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cY-9K-doe" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
+                                                    <frame key="frameInset" minX="37" minY="847" width="300" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="thumbColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLabelColor">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedLabelColor">
+                                                            <color key="value" red="1" green="0.49803921569999998" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you exercise?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-7e-jDW">
+                                                    <frame key="frameInset" minX="37" minY="809" width="250" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many days a week?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCK-Bi-Cqv">
+                                                    <frame key="frameInset" minX="11" minY="923" width="353" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8J-Oi-6Af" customClass="AnimatedSegmentSwitch" customModule="EasyForm" customModuleProvider="target">
+                                                    <frame key="frameInset" minX="36" minY="1030" width="300" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="thumbColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLabelColor">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedLabelColor">
+                                                            <color key="value" red="1" green="0.49803921569999998" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Has anyone in your home physically abused you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaZ-yS-64c">
+                                                    <frame key="frameInset" minX="36" minY="992" width="320" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please explain" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-cT-j5g">
+                                                    <frame key="frameInset" minX="11" minY="1106" width="353" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How many caffeinated drinks do you have a day?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTq-kP-Ftv">
+                                                    <frame key="frameInset" minX="11" minY="1166" width="353" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-8S-FGu">
+                                                    <frame key="frameInset" minX="36" minY="1237" width="300" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="Save &amp; Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1703,19 +1994,34 @@
                         </connections>
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
-                        <segue destination="VX5-Ir-c3W" kind="show" id="PEZ-zJ-Y3u"/>
+                        <outlet property="caffeneDrinksTextField" destination="rTq-kP-Ftv" id="vsd-gC-Wny"/>
+                        <outlet property="drinksPerWeekTextField" destination="NwL-8T-J1v" id="d1V-6C-D0Y"/>
+                        <outlet property="drugsPerWeekTextField" destination="MV1-vW-Bgr" id="zRV-xl-MSO"/>
+                        <outlet property="excerciseDaysTextField" destination="MCK-Bi-Cqv" id="MHv-sp-2y8"/>
+                        <outlet property="explainTextField" destination="fGG-cT-j5g" id="EE9-bj-BGs"/>
+                        <outlet property="packsTextField" destination="ovG-Oh-OE4" id="YPN-gb-ORr"/>
+                        <outlet property="recreationalDrugsTextField" destination="QWt-Gn-54U" id="ZMa-1E-Mp9"/>
+                        <outlet property="saveButton" destination="Ahq-8S-FGu" id="tjy-Ju-x6m"/>
+                        <outlet property="secPartnersTextField" destination="B0G-Do-LSC" id="Rfu-H1-OSY"/>
+                        <outlet property="segmentControl1" destination="gDp-dc-TP5" id="Rvw-ZP-0I7"/>
+                        <outlet property="segmentControl2" destination="xZJ-yJ-cw2" id="uiD-zR-mJu"/>
+                        <outlet property="segmentControl3" destination="NdS-za-ZVY" id="VZu-3m-5ns"/>
+                        <outlet property="segmentControl4" destination="lF6-U7-hZL" id="ddZ-pL-fyc"/>
+                        <outlet property="segmentControl5" destination="8cY-9K-doe" id="uzC-A4-9Xo"/>
+                        <outlet property="segmentControl6" destination="h8J-Oi-6Af" id="bws-2h-JLO"/>
+                        <segue destination="VX5-Ir-c3W" kind="show" identifier="goToDentalFormComplete" id="PEZ-zJ-Y3u"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5z-OH-wFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7416.8000000000002" y="2044.6776611694154"/>
+            <point key="canvasLocation" x="7592.8000000000002" y="2061.7691154422791"/>
         </scene>
-        <!--View Controller-->
+        <!--Dental Form CompleteVC-->
         <scene sceneID="YXB-o0-iWU">
             <objects>
-                <viewController id="VX5-Ir-c3W" sceneMemberID="viewController">
+                <viewController id="VX5-Ir-c3W" customClass="DentalFormCompleteVC" customModule="EasyForm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y0v-7C-K8N"/>
                         <viewControllerLayoutGuide type="bottom" id="lYE-J8-eDT"/>
@@ -1725,9 +2031,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Done!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFG-rN-aQx">
-                                <frame key="frameInset" minX="37" minY="276" width="300" height="45"/>
+                                <frame key="frameInset" minX="37" minY="259" width="300" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1740,29 +2046,55 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halfway" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-YI-2kI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="complete" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-YI-2kI">
                                 <frame key="frameInset" minX="108" minY="56" width="158" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your forms will be sent to your designated provider" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvs-5u-Vy5">
-                                <frame key="frameInset" minX="7" minY="329" width="361" height="101"/>
+                                <frame key="frameInset" minX="7" minY="302" width="361" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-Ma-tZ1">
+                                <frame key="frameInset" minX="66" minY="396" width="302" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">I verify that the information I have entered is accurate. I hereby authorize EasyForm to send this information to my health care provider</string>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checking (1)" translatesAutoresizingMaskIntoConstraints="NO" id="tu9-BP-1uX">
+                                <frame key="frameInset" minX="20" minY="429" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-1Q-xfE">
+                                <frame key="frameInset" minX="13" minY="422" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="checkImage" destination="tu9-BP-1uX" id="d2Y-Sf-jjG"/>
+                        <outlet property="saveButton" destination="crH-kX-Y9o" id="33h-tu-EZH"/>
+                        <outlet property="verifyButton" destination="CYh-1Q-xfE" id="QhY-0Z-xzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q66-Ck-gOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8216.7999999999993" y="2044.2278860569718"/>
+            <point key="canvasLocation" x="8468" y="2045.1274362818592"/>
         </scene>
     </scenes>
     <resources>
+        <image name="checking (1)" width="128" height="128"/>
+        <image name="complete" width="320" height="320"/>
         <image name="halfway" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wdd-RV-brw"/>
+    </inferredMetricsTieBreakers>
 </document>

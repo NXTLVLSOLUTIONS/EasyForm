@@ -16,8 +16,9 @@
 
 - (void)awakeFromNib
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
-    self.contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"navController"];
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+    //self.contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"navController"];
+    self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentController"];
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
 }
 

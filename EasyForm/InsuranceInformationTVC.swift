@@ -180,7 +180,7 @@ class InsuranceInformationTVC: UITableViewController {
     func saveButtonPressed(){
         
         HUD.show(.progress)
-        delay(2.0) {
+        delay(1.0) {
             HUD.hide()
             self.performSegue(withIdentifier: "showInsurance2", sender: self)
         }
