@@ -10,6 +10,7 @@ import UIKit
 
 class DentalFormTVC3: UITableViewController {
 
+    @IBOutlet weak var saveButton2: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var segmentControl1: AnimatedSegmentSwitch!
     @IBOutlet weak var segmentControl2: AnimatedSegmentSwitch!
@@ -46,6 +47,14 @@ class DentalFormTVC3: UITableViewController {
         saveButton.layer.cornerRadius = 20
         saveButton.addTarget(self, action:#selector(saveButtonPressed), for: .touchUpInside)
         
+        
+        saveButton2.layer.cornerRadius = 20
+        saveButton2.addTarget(self, action:#selector(saveButtonPressed), for: .touchUpInside)
+        
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDentist){
+            saveButton2.isHidden = true
+        }
+        
         dateTextField =  setupTextField(textField: dateTextField)
         reasonTextField =  setupTextField(textField: reasonTextField)
         
@@ -61,7 +70,13 @@ class DentalFormTVC3: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDentist){
+             return 2
+        }
+        else{
+            return 1
+        }
+       
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

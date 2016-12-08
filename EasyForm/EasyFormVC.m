@@ -136,13 +136,17 @@ static NSString * const kChiroAnnotationImage = @"ChiroAnnotation";
     
      UINavigationController *searchResultsController = [[self storyboard] instantiateViewControllerWithIdentifier:@"TableSearchResultsNavController"];
     
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    
     self.resultSearchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
     //self.resultSearchController.dimsBackgroundDuringPresentation = NO;
-   // self.resultSearchController.hidesNavigationBarDuringPresentation = NO;
-   // self.resultSearchController.searchBar.scopeButtonTitles = @[@"One", @"Two"];
+    // self.resultSearchController.hidesNavigationBarDuringPresentation = NO;
+    // self.resultSearchController.searchBar.scopeButtonTitles = @[@"One", @"Two"];
     //self.resultSearchController.searchBar.translatesAutoresizingMaskIntoConstraints = NO;
     self.resultSearchController.searchResultsUpdater = self;
-    self.resultSearchController.searchBar.frame = CGRectMake(0, 0, 375, 44);
+    
+    self.resultSearchController.searchBar.frame = CGRectMake(0, 0, viewWidth, 44);
+    
     self.resultSearchController.searchBar.delegate = self;
     self.resultSearchController.searchBar.barTintColor = [UIColor whiteColor];
     self.resultSearchController.searchBar.backgroundColor = [UIColor whiteColor];
@@ -389,18 +393,18 @@ static NSString * const kChiroAnnotationImage = @"ChiroAnnotation";
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSearchOptions) name:@"showSearchBar" object:nil];
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPayments) name:@"showPayments" object:nil];
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showProfile) name:@"showProfile" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPayments) name:@"showPayments" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showProfile) name:@"showProfile" object:nil];
     
-       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showCards) name:@"showCards" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showCards) name:@"showCards" object:nil];
     
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSettings) name:@"showSettings" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSettings) name:@"showSettings" object:nil];
     
-           [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showShare) name:@"showShare" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showShare) name:@"showShare" object:nil];
     
-       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imessageButtonPressed) name:@"showShareMessage" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imessageButtonPressed) name:@"showShareMessage" object:nil];
     
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showNewProfile) name:@"showNewProfile" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showNewProfile) name:@"showNewProfile" object:nil];
     
     //MAPVIEW CODE
    // [_mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(48.857617, 2.338820), MKCoordinateSpanMake(1.0, 1.0))];
@@ -530,7 +534,13 @@ static NSString * const kChiroAnnotationImage = @"ChiroAnnotation";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(185, 185);
+    if ( IS_IPHONE6PLUS){
+       return CGSizeMake(204, 204);
+    }
+    else{
+       return CGSizeMake(185, 185);
+    }
+    
 }
 
 
@@ -970,7 +980,14 @@ didFailAutocompleteWithError:(NSError *)error {
 
     CGFloat viewWidth = CGRectGetWidth(self.view.frame);
     
-    UIView *tabView = [[UIView alloc] initWithFrame:CGRectMake(0, 555, viewWidth, 50)];
+    UIView *tabView;
+        if ( IS_IPHONE6PLUS){
+           tabView =     [[UIView alloc] initWithFrame:CGRectMake(0, 622, viewWidth, 50)];
+        }
+        else{
+           tabView =     [[UIView alloc] initWithFrame:CGRectMake(0, 555, viewWidth, 50)];
+        }
+
     tabView.backgroundColor = EASY_BLUE;
     
     
@@ -988,7 +1005,14 @@ didFailAutocompleteWithError:(NSError *)error {
     _foursquareSegmentedControl.segmentIndicatorBorderColor = EASY_BLUE;
     _foursquareSegmentedControl.selectedSegmentIndex =1;
     //[_foursquareSegmentedControl sizeToFit];
-    _foursquareSegmentedControl.frame = CGRectMake(58, 10, 250, 30);
+    
+     if (IS_IPHONE6PLUS){
+            _foursquareSegmentedControl.frame = CGRectMake(76, 10, 250, 30);
+     }
+     else{
+           _foursquareSegmentedControl.frame = CGRectMake(58, 10, 250, 30);
+     }
+ 
     _foursquareSegmentedControl.cornerRadius = CGRectGetHeight(_foursquareSegmentedControl.frame) / 2.0f;
     
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0

@@ -284,6 +284,8 @@
 		9C85F0541DE3B16A005B10AD /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F0531DE3B16A005B10AD /* YoshikoTextField.swift */; };
 		9C85F0571DE3B1C9005B10AD /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F0561DE3B1C9005B10AD /* TextFieldsEffects.swift */; };
 		9C85F0591DE3BA80005B10AD /* PatientInformationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F0581DE3BA80005B10AD /* PatientInformationTVC.swift */; };
+		9C85FA6B1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85FA6A1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift */; };
+		9C85FA6D1DF5562000CF3F06 /* ChiroComplaintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85FA6C1DF5562000CF3F06 /* ChiroComplaintCell.swift */; };
 		9C8927281D660E040004D41B /* SettingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8927271D660E040004D41B /* SettingsTVC.m */; };
 		9C89272B1D66573E0004D41B /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89272A1D66573E0004D41B /* PaymentCell.m */; };
 		9C89272E1D6678360004D41B /* AddPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89272D1D6678360004D41B /* AddPaymentVC.m */; };
@@ -1081,6 +1083,8 @@
 		9C85F0551DE3B1B7005B10AD /* TextFieldEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
 		9C85F0561DE3B1C9005B10AD /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 		9C85F0581DE3BA80005B10AD /* PatientInformationTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientInformationTVC.swift; sourceTree = "<group>"; };
+		9C85FA6A1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChiroComplaintsTVC.swift; sourceTree = "<group>"; };
+		9C85FA6C1DF5562000CF3F06 /* ChiroComplaintCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChiroComplaintCell.swift; sourceTree = "<group>"; };
 		9C8927261D660E040004D41B /* SettingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTVC.h; sourceTree = "<group>"; };
 		9C8927271D660E040004D41B /* SettingsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTVC.m; sourceTree = "<group>"; };
 		9C8927291D66573E0004D41B /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
@@ -2450,6 +2454,8 @@
 				9CC124C81DED616300B22D6F /* DentalFormTVC3.swift */,
 				9CC124CA1DED61A600B22D6F /* DentalFormTVC4.swift */,
 				9CC124CC1DED61CD00B22D6F /* DentalFormCompleteVC.swift */,
+				9C85FA6A1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift */,
+				9C85FA6C1DF5562000CF3F06 /* ChiroComplaintCell.swift */,
 				9C85F0531DE3B16A005B10AD /* YoshikoTextField.swift */,
 				9C85F0561DE3B1C9005B10AD /* TextFieldsEffects.swift */,
 				9C85F0551DE3B1B7005B10AD /* TextFieldEffects.h */,
@@ -3663,6 +3669,7 @@
 				9C56B27A1D512D05007AADFD /* LoginVC.m in Sources */,
 				9C8BBE351D082AD6000F63C4 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				9C37BDBD1D0E6544000082EF /* UIControl+RACSignalSupportPrivate.m in Sources */,
+				9C85FA6B1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift in Sources */,
 				9C8BBE751D082AD6000F63C4 /* ZXPDF417Reader.m in Sources */,
 				9C8BBE191D082AD6000F63C4 /* ZXDataMatrixEncoderContext.m in Sources */,
 				9C8BBE1C1D082AD6000F63C4 /* ZXDataMatrixSymbolInfo.m in Sources */,
@@ -3830,6 +3837,7 @@
 				9C37BDA51D0E6544000082EF /* RACSerialDisposable.m in Sources */,
 				9C8BBF7C1D0A95EC000F63C4 /* POPAnimationExtras.mm in Sources */,
 				9C3BBCCE1D3EF7C600601920 /* individualProfileVC.m in Sources */,
+				9C85FA6D1DF5562000CF3F06 /* ChiroComplaintCell.swift in Sources */,
 				9C546CE01CE5973E00116FAB /* UIImage+KVNImageEffects.m in Sources */,
 				9C8BBE7C1D082AD6000F63C4 /* ZXQRCodeDecoder.m in Sources */,
 				9C8BBE6C1D082AD6000F63C4 /* ZXPDF417Detector.m in Sources */,

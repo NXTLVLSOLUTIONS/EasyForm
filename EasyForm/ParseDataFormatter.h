@@ -57,4 +57,5 @@
 @property (nonatomic) BOOL isLaunchedFromPhoneCall;
 @property (nonatomic) BOOL isIphone6;
 @property (nonatomic) BOOL isSelectionMade;
+@property(nonatomic) ProviderType providerType;
 @end

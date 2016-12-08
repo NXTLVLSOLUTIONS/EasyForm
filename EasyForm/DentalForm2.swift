@@ -22,11 +22,13 @@ class DentalForm2: UITableViewController {
     @IBOutlet weak var segmentControl2: AnimatedSegmentSwitch!
     @IBOutlet weak var segmentControl3: AnimatedSegmentSwitch!
     
-
+    @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var labelThree: UILabel!
+    @IBOutlet weak var labelTwo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = "Dental Questions"
+      
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -58,6 +60,22 @@ class DentalForm2: UITableViewController {
         brushTextField =  setupTextField(textField: brushTextField)
         lastExamTextField =  setupTextField(textField: lastExamTextField)
         lastXrayTextField =  setupTextField(textField: lastXrayTextField)
+        
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+            self.navigationItem.title = "Chiro Questions"
+            lastExamTextField.placeholder = "Last Chiro Visit"
+            lastXrayTextField.placeholder = "Last Doctor Visit"
+            brushTextField.placeholder = "How much do you weight?"
+            flossTextField.placeholder = "How many hours a night do you sleep?"
+            
+            
+            labelOne.text = "Are you currently pregnant?"
+            labelTwo.text = "Have you ever had chiropractic treatment?"
+            labelThree.text = "Is your health related to a recent accident?"
+        }
+        else{
+            self.navigationItem.title = "Dental Questions"
+        }
 
     }
 
@@ -76,6 +94,14 @@ class DentalForm2: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+                let header = view as! UITableViewHeaderFooterView
+                header.textLabel?.text = "CHIRO QUESTIONS"
+        }
     }
 
     /*
@@ -134,7 +160,13 @@ class DentalForm2: UITableViewController {
     */
     
     func saveButtonPressed(){
-         self.performSegue(withIdentifier: "goToDentalForm3", sender: self)
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+             self.performSegue(withIdentifier: "showComplaints", sender: self)
+        }
+        else{
+            self.performSegue(withIdentifier: "goToDentalForm3", sender: self)
+        }
+        
     }
     
     

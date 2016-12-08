@@ -22,9 +22,15 @@ class DentalFormVC: UITableViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var segmentControl: AnimatedSegmentSwitch!
     
+    @IBOutlet weak var symptomsLabel: UILabel!
     var conditionsArray: NSArray!
     var allergyArray: NSArray!
     var selectionInt: NSInteger!
+    var selectedRow: NSInteger!
+    
+     var chiroConditionsArray: NSArray!
+     var symptomsConditionsArray: NSArray!
+     var systemsConditionsArray: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +41,131 @@ class DentalFormVC: UITableViewController {
         conditionsArray =  ["Bad Breath","Bleeding Gums","Blisters on Mouth", "Broken Fillings", "Clicking Jaw" , "Difficulty Chewing", "Difficulty Opening or Closing Mouth", "Dry Mouth", "Jaw Pain", "Loose Teeth", "Mouth Pain", "Mouth Sores", "Swolen Gums", "Teeth Sensitivity to Cold", "Teeth Sensitivity to Heat","Teeth Sensitivity to Pressure", "Teeth Sensitivity to Sweets", "None of the Above"]
         
         allergyArray = ["Adhesive Tape", "Antibiotics" , "Asprin", "Sleeping Pills", "Codine", "Iodine", "Latex", "Local Anesthetics", "Sulfa", "None of the Above"]
+        
+        //Chiro
+        chiroConditionsArray = ["Bending", "Driving" , "Exercising", "Grooming", "Housework", "Kneeling", "Lifting", "Running", "Sitting", "Sleeping" , "Standing" , "Walking"]
+        
+        //systemsConditionsArray = ["Adhesive Tape", "Antibiotics" , "Asprin", "Sleeping Pills", "Codine", "Iodine", "Latex", "Local Anesthetics", "Sulfa", "None of the Above"]
+        
+        symptomsConditionsArray = ["Anxiety", "Confusion" , "Constipation", "Depression", "Diabetes", "Diarrhea", "Difficulty Breathing", "Digestion Problems", "Dizziness / Fainting", "Ear/Hearing Problems", "Eye/Vision Problems", "Fatigue", "Female Problems", "Hands/Feet Cold", "Heart Problems", "High Blood Pressure", "Insomnia", "Irritability", "Loss of Bladder Control", "Loss of Memory", "Low Resistance", "Nausea", "Nervousness", "Prostate Problems", "Speech Difficulty", "Sweaty Palms", "Tension", "Ulsers"]
+        
+        
+        systemsConditionsArray =
+        ["Abdominal bleeding",
+        "Abdominal pain",
+        "Airway obstruction",
+        "Allergies",
+        "Alopecia",
+        "Ankle swelling",
+        "Anorexia",
+        "Anxiety",
+        "Atrophy",
+        "Belching",
+        "Blurred vision",
+        "Breast lumps/masses",
+        "Bruises",
+        "Cardiac Palpations",
+        "Changes in activity",
+        "Changes in wart or moles",
+        "Chest pain",
+        "Chills",
+        "Cramps",
+        "Depression",
+        "Discharge",
+        "Dizziness",
+        "Dyspareunia",
+        "Dyspepsia",
+        "Dyspnea",
+        "Dysuria",
+        "Endocrine Polydipsia",
+        "Enlarged glands",
+        "Epistaxis",
+        "Eruptions",
+        "Excessive lacrimation",
+        "Fatigue",
+        "Fever",
+        "Gastrointestinal Unusual diet",
+        "Genitournary Polyuria nocturia",
+        "Goiter",
+        "Gum bleeding",
+        "Hair loss",
+        "Head Trauma",
+        "Headaches",
+        "Hematemasis",
+        "Hematopoietic Anemia",
+        "Hematures",
+        "Hemoptysis",
+        "Hirsuitism",
+        "Hypertension",
+        "Incontinence",
+        "Intermittent claudication",
+        "Itching",
+        "Joint deformity",
+        "Light headed",
+        "Loss of balance",
+        "Loss of consciousness",
+        "Lumps / Swelling",
+        "Lungs Cough",
+        "Lymph node enlargement/pain",
+        "Menstruation",
+        "Mouth & Throat Ulcers",
+        "Musculoskelatal Bone/joint pain",
+        "Nail changes",
+        "Nausea",
+        "Neck Stiffness",
+        "Neurological Cranial nerve deficits",
+        "Night sweats",
+        "Nipple discharge",
+        "Nose Rhinorrhea",
+        "Numbness",
+        "Oliguria",
+        "Orthopnea",
+        "Pain with respiration",
+        "Paralysis",
+        "Parasthesia",
+        "Paroxysmal nocturnal dyspnea",
+        "Phobias",
+        "Pigmentation changes",
+        "Polyphagia",
+        "Premenstrual syndrome",
+        "Psychological Mood swings",
+        "Redness",
+        "Regurgitation",
+        "Restricted ROM",
+        "Rheumatic fever",
+        "Scotomata",
+        "Scrotal swelling",
+        "Seizures",
+        "Sexually transmitted diseases",
+        "Skin dimpling",
+        "Skin Rashes",
+        "Sore throat",
+        "Soreness",
+        "Staxis",
+        "Stool color changes",
+        "Strep throat",
+        "Swelling",
+        "Syncope",
+        "Sysphagia",
+        "Temperature intolerance",
+        "TMJ pain",
+        "Tooth pain/extractions",
+        "Tremors",
+        "Tremors",
+        "Uregency",
+        "Urine color change",
+        "Vascular Raynaud’s phenomenon",
+        "Vomiting",
+        "Weakness",
+        "Weakness",
+        "Weight changes",
+        "Wheezing"]
+        
+         if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+            self.symptomsLabel.text = "Please check if you have difficulty performing any of the following"
+            self.symptomsLabel.adjustsFontSizeToFitWidth = true
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -74,6 +205,15 @@ class DentalFormVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+            if section == 1 {
+                return 3
+            }
+        }
+        else{
+              return 1
+        }
+        
         return 1
     }
 
@@ -110,6 +250,7 @@ class DentalFormVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             selectionInt = 1
+            selectedRow = indexPath.row
         }
         else{
             selectionInt = 2
@@ -127,7 +268,19 @@ class DentalFormVC: UITableViewController {
 
 
     }
-    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+         if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+            if section == 1 {
+                let header = view as! UITableViewHeaderFooterView
+                header.textLabel?.text = "CHIRO AND SYMPTOMS CHECKLIST"
+            }
+        }
+        
+ 
+//        header.textLabel?.font = UIFont(name: "Futura", size: 38)!
+//        header.textLabel?.textColor = UIColor.lightGrayColor()
+    }
     
     func setupTextField( textField: UITextField) -> UITextField{
         
@@ -147,8 +300,24 @@ class DentalFormVC: UITableViewController {
             let selectionVC = segue.destination as! SelectionTVC;
             
             if selectionInt == 1 {
-                selectionVC.selectionArray = conditionsArray
-                selectionVC.titleString = "Symptoms"
+                if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
+                    if selectedRow == 0 {
+                        selectionVC.selectionArray = chiroConditionsArray
+                        selectionVC.titleString = "Chiro Checklist"
+                    }
+                    else if selectedRow == 1{
+                        selectionVC.selectionArray = symptomsConditionsArray
+                        selectionVC.titleString = "Symptoms"
+                    }
+                    else{
+                        selectionVC.selectionArray = systemsConditionsArray
+                        selectionVC.titleString = "Systems Review"
+                    }
+                }
+                else{
+                    selectionVC.selectionArray = conditionsArray
+                    selectionVC.titleString = "Symptoms"
+                }
             }
             else{
                 selectionVC.selectionArray = allergyArray

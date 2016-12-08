@@ -56,11 +56,14 @@
     _individualProfile.image=_image;
 
    
+    ParseDataFormatter *sharedSingleton = [ParseDataFormatter sharedInstance];
     
+    sharedSingleton.providerType = ProviderTypeNone;
     
     if([_parseObject[@"type"] isEqualToString:@"Dentist"])
     {
         _individualBackground.image=[UIImage imageNamed:@"DentistBackground"];
+        sharedSingleton.providerType = ProviderTypeDentist;
       
     }
     if([_parseObject[@"type"] isEqualToString:@"Doctor"])
@@ -85,6 +88,7 @@
     if([_parseObject[@"type"] isEqualToString:@"Chiropractor"])
     {
       _individualBackground.image=[UIImage imageNamed:@"ChiroBack"];
+        sharedSingleton.providerType = ProviderTypeChiropractor;
         
     }
     
@@ -93,16 +97,16 @@
     _individualMapView.showsUserLocation=YES;
     
     
-    
-    UIImageView * imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
-    imageView1.center = CGPointMake(35, _viewWebsiteButton.frame.size.height / 2);
-    imageView1.image = [UIImage imageNamed:@"BookAppointment"];
-    [_viewWebsiteButton addSubview:imageView1];
-    
-     UIImageView * imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 20)];
-    imageView2.center = CGPointMake(45, _sendPaymentButton.frame.size.height / 2);
-    imageView2.image = [UIImage imageNamed:@"pay"];
-    [_sendPaymentButton addSubview:imageView2];
+//    
+//    UIImageView * imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+//    imageView1.center = CGPointMake(35, _viewWebsiteButton.frame.size.height / 2);
+//    imageView1.image = [UIImage imageNamed:@"BookAppointment"];
+//    [_viewWebsiteButton addSubview:imageView1];
+//    
+//     UIImageView * imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 20)];
+//    imageView2.center = CGPointMake(45, _sendPaymentButton.frame.size.height / 2);
+//    imageView2.image = [UIImage imageNamed:@"pay"];
+//    [_sendPaymentButton addSubview:imageView2];
     
     _takeUberButton.layer.cornerRadius = 20;
     _takeUberButton.layer.masksToBounds = NO;
@@ -119,6 +123,9 @@
     _fillOutFormsButton.layer.shadowOpacity = 0.5f;
     _fillOutFormsButton.layer.shadowRadius = 4.0f;
     [_fillOutFormsButton addTarget:self action:@selector(formsButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+      CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    _sendPaymentButton.frame = CGRectMake(414, 0, viewWidth/2, 47);
     
     // Do any additional setup after loading the view.
     [self loadProviderProfile];
@@ -242,9 +249,34 @@
 }
 
 -(void)formsButtonPressed{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Forms1" bundle:nil];
-    UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
-    [self.navigationController showViewController:viewController sender:self];
+    
+    if ([ParseDataFormatter sharedInstance].providerType == ProviderTypeDentist || [ParseDataFormatter sharedInstance].providerType == ProviderTypeChiropractor) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Forms1" bundle:nil];
+        UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
+        [self.navigationController showViewController:viewController sender:self];
+    }
+    else{
+        
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"No Forms"
+                                      message:@"This provider has not provided any EasyForms"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:@"Ok"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     
+                                 }];
+        
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
 }
 
 //-(void) formsButtonPressed
@@ -583,6 +615,10 @@
         ViewPDFController *vc=[segue destinationViewController];
         vc.pdfData = pdfData;
         vc.providerEmail = email;
+    }
+    if([[segue identifier] isEqualToString:@"PatientInfoVC"])
+    {
+        
     }
 }
 

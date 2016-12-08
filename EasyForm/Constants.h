@@ -23,6 +23,13 @@ typedef enum {
     CardTypeAmex,
 } CardType;
 
+typedef enum {
+    ProviderTypeDoctor,
+    ProviderTypeDentist,
+    ProviderTypeChiropractor,
+    ProviderTypeNone,
+} ProviderType;
+
 //User Properties
 #define BUSINESS @"Business"
 #define LAWYER @"Lawyer"
