@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
 //
 
-#import "LGSideMenuController.h"
+#import <LGSideMenuController/LGSideMenuController.h>
 
 @interface MainViewController : LGSideMenuController
 

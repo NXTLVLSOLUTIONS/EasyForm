@@ -52,7 +52,7 @@ class ParseApi {
 
     func fetchAllBusinesses(){
         
-         HUD.show(.progress)
+        KVNProgress.show()
         
         feedArray = []
         
@@ -65,7 +65,8 @@ class ParseApi {
                     self.feedArray.add(object)
                 }
                 
-                HUD.hide()
+                KVNProgress.dismiss()
+
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProviders"), object: nil)
             }
         }

@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B9788BAFB641DECE2DE8797 /* Pods_EasyFormTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49843BC15A0A6DFE84894768 /* Pods_EasyFormTests.framework */; };
+		1F6EF0401E0452E700FF8CAA /* NewProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EF03F1E0452E700FF8CAA /* NewProfileTVC.swift */; };
+		1F6EF0421E04553E00FF8CAA /* Insurance1TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EF0411E04553E00FF8CAA /* Insurance1TVC.swift */; };
+		1F6EF0441E04556000FF8CAA /* Insurance2TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EF0431E04556000FF8CAA /* Insurance2TVC.swift */; };
+		1FCC90CC1E080CB70062D6D9 /* DentalFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC90CB1E080CB70062D6D9 /* DentalFormData.swift */; };
+		1FCC90CE1E080CD90062D6D9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC90CD1E080CD90062D6D9 /* APIManager.swift */; };
+		1FD8DD521DFBB8E700878535 /* MenuViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD8DD511DFBB8E700878535 /* MenuViews.storyboard */; };
+		1FD8DD541DFBB8F500878535 /* HIPAA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD8DD531DFBB8F500878535 /* HIPAA.storyboard */; };
+		1FD8DD561DFBB9D000878535 /* HIPAATableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8DD551DFBB9D000878535 /* HIPAATableVC.swift */; };
+		1FE5F4B21DFAC9A20051FBF8 /* HIRForm1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE5F4B11DFAC9A20051FBF8 /* HIRForm1.storyboard */; };
+		1FE5F4B41DFACAA40051FBF8 /* HIRSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5F4B31DFACAA40051FBF8 /* HIRSelectionTVC.swift */; };
+		1FE5F4B61DFACB6E0051FBF8 /* HIRTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5F4B51DFACB6E0051FBF8 /* HIRTableVC.swift */; };
+		1FF377F71DFC6CC400145C97 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377D51DFC6CC400145C97 /* IQNSArray+Sort.m */; };
+		1FF377F81DFC6CC400145C97 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377D71DFC6CC400145C97 /* IQUIScrollView+Additions.m */; };
+		1FF377F91DFC6CC400145C97 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377D91DFC6CC400145C97 /* IQUITextFieldView+Additions.m */; };
+		1FF377FA1DFC6CC400145C97 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377DB1DFC6CC400145C97 /* IQUIView+Hierarchy.m */; };
+		1FF377FB1DFC6CC400145C97 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377DD1DFC6CC400145C97 /* IQUIViewController+Additions.m */; };
+		1FF377FC1DFC6CC400145C97 /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377DF1DFC6CC400145C97 /* IQUIWindow+Hierarchy.m */; };
+		1FF377FD1DFC6CC400145C97 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377E41DFC6CC400145C97 /* IQKeyboardManager.m */; };
+		1FF377FE1DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377E61DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.m */; };
+		1FF377FF1DFC6CC400145C97 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377E91DFC6CC400145C97 /* IQTextView.m */; };
+		1FF378001DFC6CC400145C97 /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377EC1DFC6CC400145C97 /* IQBarButtonItem.m */; };
+		1FF378011DFC6CC400145C97 /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377EE1DFC6CC400145C97 /* IQPreviousNextView.m */; };
+		1FF378021DFC6CC400145C97 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377F01DFC6CC400145C97 /* IQTitleBarButtonItem.m */; };
+		1FF378031DFC6CC400145C97 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377F21DFC6CC400145C97 /* IQToolbar.m */; };
+		1FF378041DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF377F41DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.m */; };
+		1FF378051DFC6CC400145C97 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1FF377F61DFC6CC400145C97 /* IQKeyboardManager.bundle */; };
+		1FF378071DFC88B300145C97 /* DoctorQuesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF378061DFC88B300145C97 /* DoctorQuesTVC.swift */; };
+		2FFBB604238C9448BFBEAEA3 /* Pods_EasyFormUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4211A98BDB31B4D379EBB77A /* Pods_EasyFormUITests.framework */; };
+		40A83F856848295A22D654C4 /* Pods_EasyForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7143DE877E732489CF78F4F0 /* Pods_EasyForm.framework */; };
 		9C0685771DE4CCAA00E718DF /* BetterSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0685761DE4CCAA00E718DF /* BetterSegmentedControl.swift */; };
 		9C0685791DE4CF3200E718DF /* InsuranceInformationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0685781DE4CF3200E718DF /* InsuranceInformationTVC.swift */; };
 		9C06857B1DE4D3CD00E718DF /* AnimatedSegmentSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C06857A1DE4D3CD00E718DF /* AnimatedSegmentSwitch.swift */; };
@@ -231,7 +261,6 @@
 		9C56B2B81D570929007AADFD /* PersonalInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56B2B21D570929007AADFD /* PersonalInformationCell.m */; };
 		9C56B2B91D570929007AADFD /* AccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C56B2B31D570929007AADFD /* AccordionHeaderView.xib */; };
 		9C56B2BA1D570929007AADFD /* FZAccordionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56B2B51D570929007AADFD /* FZAccordionTableView.m */; };
-		9C56B2BC1D570B23007AADFD /* rahiem_protest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C56B2BB1D570B22007AADFD /* rahiem_protest.jpg */; };
 		9C56B2C31D5A3D4B007AADFD /* MXParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56B2BE1D5A3D4A007AADFD /* MXParallaxHeader.m */; };
 		9C56B2C41D5A3D4B007AADFD /* MXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56B2C01D5A3D4A007AADFD /* MXScrollView.m */; };
 		9C56B2C51D5A3D4B007AADFD /* MXScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56B2C21D5A3D4A007AADFD /* MXScrollViewController.m */; };
@@ -545,34 +574,24 @@
 		9C90639E1D3ECB9100C93515 /* DoctorAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90639D1D3ECB9100C93515 /* DoctorAnnotation.m */; };
 		9C9063A11D3ECC4400C93515 /* TSDemoClusteredAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9063A01D3ECC4400C93515 /* TSDemoClusteredAnnotationView.m */; };
 		9C9063A31D3ECF0A00C93515 /* CDToilets.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C9063A21D3ECF0A00C93515 /* CDToilets.json */; };
-		9CB02E111D43BA6500048C90 /* MenuViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB02E101D43BA6500048C90 /* MenuViews.storyboard */; };
 		9CB02E151D43BD1300048C90 /* PaymentMethodTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB02E141D43BD1300048C90 /* PaymentMethodTVC.m */; };
 		9CB02E181D43CC2A00048C90 /* MyCardsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB02E171D43CC2A00048C90 /* MyCardsTVC.m */; };
 		9CB02E1B1D43D99100048C90 /* ApplePayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB02E1A1D43D99100048C90 /* ApplePayVC.m */; };
 		9CBD88361D989E5F0062AC5D /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88351D989E5F0062AC5D /* ShareVC.m */; };
 		9CBD88391D98D6C30062AC5D /* ViewPDFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88381D98D6C30062AC5D /* ViewPDFController.m */; };
-		9CBD883B1D98D8C40062AC5D /* testB.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD883A1D98D8C40062AC5D /* testB.pdf */; };
 		9CBD88421D99E0790062AC5D /* NewProfileTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88411D99E0790062AC5D /* NewProfileTVC.m */; };
 		9CBD88451D99F59B0062AC5D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88441D99F59B0062AC5D /* UserModel.m */; };
-		9CBD88671D9BBD410062AC5D /* testA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD88661D9BBD410062AC5D /* testA.pdf */; };
 		9CBD88711D9D70C40062AC5D /* IQActionSheetPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD886E1D9D70C40062AC5D /* IQActionSheetPickerView.m */; };
 		9CBD88721D9D70C40062AC5D /* IQActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88701D9D70C40062AC5D /* IQActionSheetViewController.m */; };
 		9CBD88751D9D875E0062AC5D /* EditPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD88741D9D875E0062AC5D /* EditPaymentVC.m */; };
-		9CBD88791D9DF42A0062AC5D /* WellnessRegistration.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD88781D9DF42A0062AC5D /* WellnessRegistration.pdf */; };
-		9CBD887B1D9DF5EC0062AC5D /* Registration.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD887A1D9DF5EC0062AC5D /* Registration.pdf */; };
 		9CC124C91DED616300B22D6F /* DentalFormTVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC124C81DED616300B22D6F /* DentalFormTVC3.swift */; };
 		9CC124CB1DED61A600B22D6F /* DentalFormTVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC124CA1DED61A600B22D6F /* DentalFormTVC4.swift */; };
 		9CC124CD1DED61CD00B22D6F /* DentalFormCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC124CC1DED61CD00B22D6F /* DentalFormCompleteVC.swift */; };
-		9CD5AC7A1DA7C8E900527655 /* MobileAppDiscovery.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD5AC791DA7C8E900527655 /* MobileAppDiscovery.pdf */; };
 		9CD5AC7D1DAE0D0500527655 /* RegisterVCNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AC7C1DAE0D0500527655 /* RegisterVCNew.m */; };
 		9CD5AC821DAEB8BC00527655 /* SearchResultsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AC811DAEB8BC00527655 /* SearchResultsTVC.m */; };
 		9CD5AC861DAECF4100527655 /* SearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AC851DAECF4100527655 /* SearchResultsCell.m */; };
-		9CD5AC881DAEF48C00527655 /* PowerSource.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD5AC871DAEF48C00527655 /* PowerSource.pdf */; };
-		9CD5AC8A1DAEF51A00527655 /* IconicImaging2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD5AC891DAEF51A00527655 /* IconicImaging2.pdf */; };
-		9CD5AC8C1DAF1DC300527655 /* IconicImaging.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD5AC8B1DAF1DC300527655 /* IconicImaging.pdf */; };
 		9CFB48A31D0E7C6700AB733F /* IntroRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB48A21D0E7C6700AB733F /* IntroRootVC.m */; };
 		9CFB48A61D0E7CDB00AB733F /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB48A51D0E7CDB00AB733F /* PageContentViewController.m */; };
-		D593526CB7C9DBB6BD408694 /* libPods-EasyForm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D6BC382C0F62E9221EC6C3 /* libPods-EasyForm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -593,9 +612,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		79D6BC382C0F62E9221EC6C3 /* libPods-EasyForm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyForm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		892AA04869D0C79B4930F0F5 /* Pods-EasyForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm.release.xcconfig"; sourceTree = "<group>"; };
-		9128917BAD439C1A801DCCB7 /* Pods-EasyForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyForm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm.debug.xcconfig"; sourceTree = "<group>"; };
+		066F14E981E9EEAF06F10E36 /* Pods-EasyForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyForm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm.debug.xcconfig"; sourceTree = "<group>"; };
+		1F6EF03F1E0452E700FF8CAA /* NewProfileTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProfileTVC.swift; sourceTree = "<group>"; };
+		1F6EF0411E04553E00FF8CAA /* Insurance1TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insurance1TVC.swift; sourceTree = "<group>"; };
+		1F6EF0431E04556000FF8CAA /* Insurance2TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insurance2TVC.swift; sourceTree = "<group>"; };
+		1FCC90CB1E080CB70062D6D9 /* DentalFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DentalFormData.swift; sourceTree = "<group>"; };
+		1FCC90CD1E080CD90062D6D9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1FD2F4791DFE75D100F588C9 /* EasyForm-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EasyForm-Bridging-Header.h"; path = "EasyForm/EasyForm-Bridging-Header.h"; sourceTree = "<group>"; };
+		1FD8DD511DFBB8E700878535 /* MenuViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuViews.storyboard; sourceTree = "<group>"; };
+		1FD8DD531DFBB8F500878535 /* HIPAA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HIPAA.storyboard; sourceTree = "<group>"; };
+		1FD8DD551DFBB9D000878535 /* HIPAATableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPAATableVC.swift; sourceTree = "<group>"; };
+		1FE5F4B11DFAC9A20051FBF8 /* HIRForm1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HIRForm1.storyboard; sourceTree = "<group>"; };
+		1FE5F4B31DFACAA40051FBF8 /* HIRSelectionTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIRSelectionTVC.swift; sourceTree = "<group>"; };
+		1FE5F4B51DFACB6E0051FBF8 /* HIRTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIRTableVC.swift; sourceTree = "<group>"; };
+		1FF377D41DFC6CC400145C97 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		1FF377D51DFC6CC400145C97 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		1FF377D61DFC6CC400145C97 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
+		1FF377D71DFC6CC400145C97 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
+		1FF377D81DFC6CC400145C97 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		1FF377D91DFC6CC400145C97 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		1FF377DA1DFC6CC400145C97 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		1FF377DB1DFC6CC400145C97 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		1FF377DC1DFC6CC400145C97 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		1FF377DD1DFC6CC400145C97 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		1FF377DE1DFC6CC400145C97 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		1FF377DF1DFC6CC400145C97 /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		1FF377E11DFC6CC400145C97 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		1FF377E21DFC6CC400145C97 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		1FF377E31DFC6CC400145C97 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		1FF377E41DFC6CC400145C97 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		1FF377E51DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		1FF377E61DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		1FF377E81DFC6CC400145C97 /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		1FF377E91DFC6CC400145C97 /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		1FF377EB1DFC6CC400145C97 /* IQBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
+		1FF377EC1DFC6CC400145C97 /* IQBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
+		1FF377ED1DFC6CC400145C97 /* IQPreviousNextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQPreviousNextView.h; sourceTree = "<group>"; };
+		1FF377EE1DFC6CC400145C97 /* IQPreviousNextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQPreviousNextView.m; sourceTree = "<group>"; };
+		1FF377EF1DFC6CC400145C97 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		1FF377F01DFC6CC400145C97 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		1FF377F11DFC6CC400145C97 /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		1FF377F21DFC6CC400145C97 /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		1FF377F31DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		1FF377F41DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		1FF377F61DFC6CC400145C97 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		1FF378061DFC88B300145C97 /* DoctorQuesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorQuesTVC.swift; sourceTree = "<group>"; };
+		4211A98BDB31B4D379EBB77A /* Pods_EasyFormUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFormUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49843BC15A0A6DFE84894768 /* Pods_EasyFormTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFormTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F52D94DF05FFF08E54E3C58 /* Pods-EasyFormTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFormTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFormTests/Pods-EasyFormTests.release.xcconfig"; sourceTree = "<group>"; };
+		7143DE877E732489CF78F4F0 /* Pods_EasyForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAF2BE39B0581157E25AC5A /* Pods-EasyFormTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFormTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFormTests/Pods-EasyFormTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C4B65593B3596FB32596504 /* Pods-EasyFormUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFormUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFormUITests/Pods-EasyFormUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0685761DE4CCAA00E718DF /* BetterSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSegmentedControl.swift; sourceTree = "<group>"; };
 		9C0685781DE4CF3200E718DF /* InsuranceInformationTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceInformationTVC.swift; sourceTree = "<group>"; };
 		9C06857A1DE4D3CD00E718DF /* AnimatedSegmentSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSegmentSwitch.swift; sourceTree = "<group>"; };
@@ -1011,7 +1078,6 @@
 		9C56B2B31D570929007AADFD /* AccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccordionHeaderView.xib; sourceTree = "<group>"; };
 		9C56B2B41D570929007AADFD /* FZAccordionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZAccordionTableView.h; sourceTree = "<group>"; };
 		9C56B2B51D570929007AADFD /* FZAccordionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZAccordionTableView.m; sourceTree = "<group>"; };
-		9C56B2BB1D570B22007AADFD /* rahiem_protest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rahiem_protest.jpg; sourceTree = "<group>"; };
 		9C56B2BD1D5A3D4A007AADFD /* MXParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXParallaxHeader.h; sourceTree = "<group>"; };
 		9C56B2BE1D5A3D4A007AADFD /* MXParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXParallaxHeader.m; sourceTree = "<group>"; };
 		9C56B2BF1D5A3D4A007AADFD /* MXScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXScrollView.h; sourceTree = "<group>"; };
@@ -1633,7 +1699,6 @@
 		9C90639F1D3ECC4400C93515 /* TSDemoClusteredAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDemoClusteredAnnotationView.h; sourceTree = "<group>"; };
 		9C9063A01D3ECC4400C93515 /* TSDemoClusteredAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDemoClusteredAnnotationView.m; sourceTree = "<group>"; };
 		9C9063A21D3ECF0A00C93515 /* CDToilets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CDToilets.json; sourceTree = "<group>"; };
-		9CB02E101D43BA6500048C90 /* MenuViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MenuViews.storyboard; path = ../MenuViews.storyboard; sourceTree = "<group>"; };
 		9CB02E131D43BD1300048C90 /* PaymentMethodTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentMethodTVC.h; sourceTree = "<group>"; };
 		9CB02E141D43BD1300048C90 /* PaymentMethodTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodTVC.m; sourceTree = "<group>"; };
 		9CB02E161D43CC2A00048C90 /* MyCardsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardsTVC.h; sourceTree = "<group>"; };
@@ -1644,38 +1709,32 @@
 		9CBD88351D989E5F0062AC5D /* ShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareVC.m; sourceTree = "<group>"; };
 		9CBD88371D98D6C30062AC5D /* ViewPDFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPDFController.h; sourceTree = "<group>"; };
 		9CBD88381D98D6C30062AC5D /* ViewPDFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPDFController.m; sourceTree = "<group>"; };
-		9CBD883A1D98D8C40062AC5D /* testB.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testB.pdf; sourceTree = "<group>"; };
 		9CBD88401D99E0790062AC5D /* NewProfileTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProfileTVC.h; sourceTree = "<group>"; };
 		9CBD88411D99E0790062AC5D /* NewProfileTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProfileTVC.m; sourceTree = "<group>"; };
 		9CBD88431D99F59B0062AC5D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		9CBD88441D99F59B0062AC5D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		9CBD88661D9BBD410062AC5D /* testA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testA.pdf; sourceTree = "<group>"; };
 		9CBD886D1D9D70C40062AC5D /* IQActionSheetPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionSheetPickerView.h; sourceTree = "<group>"; };
 		9CBD886E1D9D70C40062AC5D /* IQActionSheetPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionSheetPickerView.m; sourceTree = "<group>"; };
 		9CBD886F1D9D70C40062AC5D /* IQActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionSheetViewController.h; sourceTree = "<group>"; };
 		9CBD88701D9D70C40062AC5D /* IQActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionSheetViewController.m; sourceTree = "<group>"; };
 		9CBD88731D9D875E0062AC5D /* EditPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPaymentVC.h; sourceTree = "<group>"; };
 		9CBD88741D9D875E0062AC5D /* EditPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPaymentVC.m; sourceTree = "<group>"; };
-		9CBD88781D9DF42A0062AC5D /* WellnessRegistration.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WellnessRegistration.pdf; sourceTree = "<group>"; };
-		9CBD887A1D9DF5EC0062AC5D /* Registration.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Registration.pdf; sourceTree = "<group>"; };
 		9CC124C81DED616300B22D6F /* DentalFormTVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DentalFormTVC3.swift; sourceTree = "<group>"; };
 		9CC124CA1DED61A600B22D6F /* DentalFormTVC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DentalFormTVC4.swift; sourceTree = "<group>"; };
 		9CC124CC1DED61CD00B22D6F /* DentalFormCompleteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DentalFormCompleteVC.swift; sourceTree = "<group>"; };
 		9CCD5D371DA7661000EA48C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9CD5AC791DA7C8E900527655 /* MobileAppDiscovery.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MobileAppDiscovery.pdf; sourceTree = "<group>"; };
 		9CD5AC7B1DAE0D0500527655 /* RegisterVCNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVCNew.h; sourceTree = "<group>"; };
 		9CD5AC7C1DAE0D0500527655 /* RegisterVCNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVCNew.m; sourceTree = "<group>"; };
 		9CD5AC811DAEB8BC00527655 /* SearchResultsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTVC.m; sourceTree = "<group>"; };
 		9CD5AC831DAEB8C400527655 /* SearchResultsTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultsTVC.h; sourceTree = "<group>"; };
 		9CD5AC841DAECF4100527655 /* SearchResultsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsCell.h; sourceTree = "<group>"; };
 		9CD5AC851DAECF4100527655 /* SearchResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsCell.m; sourceTree = "<group>"; };
-		9CD5AC871DAEF48C00527655 /* PowerSource.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PowerSource.pdf; sourceTree = "<group>"; };
-		9CD5AC891DAEF51A00527655 /* IconicImaging2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = IconicImaging2.pdf; sourceTree = "<group>"; };
-		9CD5AC8B1DAF1DC300527655 /* IconicImaging.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = IconicImaging.pdf; sourceTree = "<group>"; };
 		9CFB48A11D0E7C6700AB733F /* IntroRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroRootVC.h; sourceTree = "<group>"; };
 		9CFB48A21D0E7C6700AB733F /* IntroRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroRootVC.m; sourceTree = "<group>"; };
 		9CFB48A41D0E7CDB00AB733F /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		9CFB48A51D0E7CDB00AB733F /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		AA9F400739CABFE3001567A0 /* Pods-EasyForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm.release.xcconfig"; sourceTree = "<group>"; };
+		B8CFAB22F088360619589296 /* Pods-EasyFormUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFormUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFormUITests/Pods-EasyFormUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1709,7 +1768,7 @@
 				9C546CF51CE599F900116FAB /* Security.framework in Frameworks */,
 				9C546CFF1CE59A1400116FAB /* AssetsLibrary.framework in Frameworks */,
 				9C546D021CE59A1400116FAB /* Bolts.framework in Frameworks */,
-				D593526CB7C9DBB6BD408694 /* libPods-EasyForm.a in Frameworks */,
+				40A83F856848295A22D654C4 /* Pods_EasyForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1717,6 +1776,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9788BAFB641DECE2DE8797 /* Pods_EasyFormTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1724,12 +1784,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FFBB604238C9448BFBEAEA3 /* Pods_EasyFormUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FCC90CF1E080CE30062D6D9 /* dental */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC90CB1E080CB70062D6D9 /* DentalFormData.swift */,
+				1FCC90CD1E080CD90062D6D9 /* APIManager.swift */,
+			);
+			name = dental;
+			sourceTree = "<group>";
+		};
+		1FF377D21DFC6CC400145C97 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377D31DFC6CC400145C97 /* Categories */,
+				1FF377E01DFC6CC400145C97 /* Constants */,
+				1FF377E31DFC6CC400145C97 /* IQKeyboardManager.h */,
+				1FF377E41DFC6CC400145C97 /* IQKeyboardManager.m */,
+				1FF377E51DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.h */,
+				1FF377E61DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.m */,
+				1FF377E71DFC6CC400145C97 /* IQTextView */,
+				1FF377EA1DFC6CC400145C97 /* IQToolbar */,
+				1FF377F51DFC6CC400145C97 /* Resources */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		1FF377D31DFC6CC400145C97 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377D41DFC6CC400145C97 /* IQNSArray+Sort.h */,
+				1FF377D51DFC6CC400145C97 /* IQNSArray+Sort.m */,
+				1FF377D61DFC6CC400145C97 /* IQUIScrollView+Additions.h */,
+				1FF377D71DFC6CC400145C97 /* IQUIScrollView+Additions.m */,
+				1FF377D81DFC6CC400145C97 /* IQUITextFieldView+Additions.h */,
+				1FF377D91DFC6CC400145C97 /* IQUITextFieldView+Additions.m */,
+				1FF377DA1DFC6CC400145C97 /* IQUIView+Hierarchy.h */,
+				1FF377DB1DFC6CC400145C97 /* IQUIView+Hierarchy.m */,
+				1FF377DC1DFC6CC400145C97 /* IQUIViewController+Additions.h */,
+				1FF377DD1DFC6CC400145C97 /* IQUIViewController+Additions.m */,
+				1FF377DE1DFC6CC400145C97 /* IQUIWindow+Hierarchy.h */,
+				1FF377DF1DFC6CC400145C97 /* IQUIWindow+Hierarchy.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1FF377E01DFC6CC400145C97 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377E11DFC6CC400145C97 /* IQKeyboardManagerConstants.h */,
+				1FF377E21DFC6CC400145C97 /* IQKeyboardManagerConstantsInternal.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1FF377E71DFC6CC400145C97 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377E81DFC6CC400145C97 /* IQTextView.h */,
+				1FF377E91DFC6CC400145C97 /* IQTextView.m */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		1FF377EA1DFC6CC400145C97 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377EB1DFC6CC400145C97 /* IQBarButtonItem.h */,
+				1FF377EC1DFC6CC400145C97 /* IQBarButtonItem.m */,
+				1FF377ED1DFC6CC400145C97 /* IQPreviousNextView.h */,
+				1FF377EE1DFC6CC400145C97 /* IQPreviousNextView.m */,
+				1FF377EF1DFC6CC400145C97 /* IQTitleBarButtonItem.h */,
+				1FF377F01DFC6CC400145C97 /* IQTitleBarButtonItem.m */,
+				1FF377F11DFC6CC400145C97 /* IQToolbar.h */,
+				1FF377F21DFC6CC400145C97 /* IQToolbar.m */,
+				1FF377F31DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.h */,
+				1FF377F41DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.m */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		1FF377F51DFC6CC400145C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FF377F61DFC6CC400145C97 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		31B97E3309106E632BF9E469 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1739,18 +1887,11 @@
 				9C4963C41DA7C52F00F07A4E /* CoreMedia.framework */,
 				9C4963C01DA7C4CC00F07A4E /* AudioUnit.framework */,
 				9CCD5D371DA7661000EA48C3 /* UIKit.framework */,
-				79D6BC382C0F62E9221EC6C3 /* libPods-EasyForm.a */,
+				7143DE877E732489CF78F4F0 /* Pods_EasyForm.framework */,
+				49843BC15A0A6DFE84894768 /* Pods_EasyFormTests.framework */,
+				4211A98BDB31B4D379EBB77A /* Pods_EasyFormUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		53A86AFA14D75E08ABA9EACF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9128917BAD439C1A801DCCB7 /* Pods-EasyForm.debug.xcconfig */,
-				892AA04869D0C79B4930F0F5 /* Pods-EasyForm.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		9C1708441CEEA3BA00BE78E9 /* Message Controller */ = {
@@ -1848,15 +1989,17 @@
 		9C2866D11CEE93DC008A898E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				9CB02E101D43BA6500048C90 /* MenuViews.storyboard */,
+				1FD8DD511DFBB8E700878535 /* MenuViews.storyboard */,
 				9C546C851CE41EA700116FAB /* Main.storyboard */,
 				9C2866CF1CEE938C008A898E /* Intro.storyboard */,
 				9C85F0121DE265D1005B10AD /* Home.storyboard */,
 				9C85F0471DE39622005B10AD /* Menu.storyboard */,
-				9C85F04B1DE3A4F3005B10AD /* Forms1.storyboard */,
 				9C56B2761D512C70007AADFD /* Login.storyboard */,
 				9C56B2D11D5A89E7007AADFD /* ViewController.xib */,
 				9C8BBBBE1D066460000F63C4 /* View.xib */,
+				9C85F04B1DE3A4F3005B10AD /* Forms1.storyboard */,
+				1FE5F4B11DFAC9A20051FBF8 /* HIRForm1.storyboard */,
+				1FD8DD531DFBB8F500878535 /* HIPAA.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -2106,12 +2249,13 @@
 		9C546C701CE41EA700116FAB = {
 			isa = PBXGroup;
 			children = (
+				1FD2F4791DFE75D100F588C9 /* EasyForm-Bridging-Header.h */,
 				9C546C7B1CE41EA700116FAB /* EasyForm */,
 				9C546C951CE41EA700116FAB /* EasyFormTests */,
 				9C546CA01CE41EA700116FAB /* EasyFormUITests */,
 				9C546C7A1CE41EA700116FAB /* Products */,
-				53A86AFA14D75E08ABA9EACF /* Pods */,
 				31B97E3309106E632BF9E469 /* Frameworks */,
+				A849FA37562BD6DD5C152A7D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2133,7 +2277,6 @@
 				9C8927361D689B680004D41B /* StripePayments.m */,
 				9C8927321D67D5770004D41B /* VJCreditCardValidations.h */,
 				9C8927331D67D5770004D41B /* VJCreditCardValidations.m */,
-				9C2691B91D62DDE600737EAC /* GoogleMapsApi */,
 				9C56B3111D5D956D007AADFD /* HMSegmentedControl.h */,
 				9C56B3121D5D956D007AADFD /* HMSegmentedControl.m */,
 				9CD5AC7B1DAE0D0500527655 /* RegisterVCNew.h */,
@@ -2195,7 +2338,6 @@
 				9C56B2871D5148DF007AADFD /* UIViewController+REFrostedViewController.h */,
 				9C56B2881D5148DF007AADFD /* UIViewController+REFrostedViewController.m */,
 				9C56B27B1D512DBB007AADFD /* EVid.mp4 */,
-				9C8BBEA11D0A4FE3000F63C4 /* SegmentControl */,
 				9C546C7F1CE41EA700116FAB /* AppDelegate.h */,
 				9C546C801CE41EA700116FAB /* AppDelegate.m */,
 				9C6589EA1D0543B4004502BF /* Constants.h */,
@@ -2265,15 +2407,8 @@
 				9C56B29F1D529617007AADFD /* SelectFormVC.m */,
 				9C56B2A11D529C58007AADFD /* SelectFormCell.h */,
 				9C56B2A21D529C58007AADFD /* SelectFormCell.m */,
-				9C56B2BB1D570B22007AADFD /* rahiem_protest.jpg */,
-				9CBD883A1D98D8C40062AC5D /* testB.pdf */,
-				9CBD88661D9BBD410062AC5D /* testA.pdf */,
-				9CBD88781D9DF42A0062AC5D /* WellnessRegistration.pdf */,
-				9CD5AC791DA7C8E900527655 /* MobileAppDiscovery.pdf */,
-				9CD5AC891DAEF51A00527655 /* IconicImaging2.pdf */,
-				9CD5AC8B1DAF1DC300527655 /* IconicImaging.pdf */,
-				9CD5AC871DAEF48C00527655 /* PowerSource.pdf */,
-				9CBD887A1D9DF5EC0062AC5D /* Registration.pdf */,
+				1FF377D21DFC6CC400145C97 /* IQKeyboardManager */,
+				9C8BBEA11D0A4FE3000F63C4 /* SegmentControl */,
 				9CBD883C1D99E01F0062AC5D /* Profile */,
 				9C55119C1D9503760019B5CC /* Cell Items */,
 				9CB02E121D43BCD100048C90 /* Side Menu */,
@@ -2289,10 +2424,12 @@
 				9C1708751CF1016100BE78E9 /* CardIO */,
 				9C1708631CF087B000BE78E9 /* JVFloatLabeledTextField */,
 				9C1708441CEEA3BA00BE78E9 /* Message Controller */,
+				9C2691B91D62DDE600737EAC /* GoogleMapsApi */,
 				9C2866CE1CEE92B8008A898E /* Intro Page Controller */,
-				9C85F0201DE2B25B005B10AD /* SwiftClasses */,
+				9C85F0341DE2C52D005B10AD /* PKHUD */,
 				9C85F0141DE26616005B10AD /* Pulley */,
 				9C546CE61CE5974600116FAB /* KVN HUD */,
+				9C85F0201DE2B25B005B10AD /* SwiftClasses */,
 				9C2866D11CEE93DC008A898E /* Storyboards */,
 				9C546CE71CE599B600116FAB /* Framework */,
 				9C546CC61CE4261700116FAB /* Fonts */,
@@ -2441,7 +2578,6 @@
 			children = (
 				9C06857A1DE4D3CD00E718DF /* AnimatedSegmentSwitch.swift */,
 				9C0685761DE4CCAA00E718DF /* BetterSegmentedControl.swift */,
-				9C85F0341DE2C52D005B10AD /* PKHUD */,
 				9C85F0211DE2B288005B10AD /* ParseApi.swift */,
 				9C85F0491DE39A40005B10AD /* SettingsMenuTVC.swift */,
 				9C85F0581DE3BA80005B10AD /* PatientInformationTVC.swift */,
@@ -2453,14 +2589,22 @@
 				9C5D2B0D1DED592F00AF9263 /* DentalForm2.swift */,
 				9CC124C81DED616300B22D6F /* DentalFormTVC3.swift */,
 				9CC124CA1DED61A600B22D6F /* DentalFormTVC4.swift */,
-				9CC124CC1DED61CD00B22D6F /* DentalFormCompleteVC.swift */,
+				1FF378061DFC88B300145C97 /* DoctorQuesTVC.swift */,
 				9C85FA6A1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift */,
 				9C85FA6C1DF5562000CF3F06 /* ChiroComplaintCell.swift */,
+				9CC124CC1DED61CD00B22D6F /* DentalFormCompleteVC.swift */,
 				9C85F0531DE3B16A005B10AD /* YoshikoTextField.swift */,
-				9C85F0561DE3B1C9005B10AD /* TextFieldsEffects.swift */,
 				9C85F0551DE3B1B7005B10AD /* TextFieldEffects.h */,
+				9C85F0561DE3B1C9005B10AD /* TextFieldsEffects.swift */,
 				9C5D2B071DED3E9100AF9263 /* SelectionCell.swift */,
 				9C5D2B0B1DED3F1E00AF9263 /* SelectionTVC.swift */,
+				1FE5F4B31DFACAA40051FBF8 /* HIRSelectionTVC.swift */,
+				1FE5F4B51DFACB6E0051FBF8 /* HIRTableVC.swift */,
+				1FD8DD551DFBB9D000878535 /* HIPAATableVC.swift */,
+				1F6EF03F1E0452E700FF8CAA /* NewProfileTVC.swift */,
+				1F6EF0411E04553E00FF8CAA /* Insurance1TVC.swift */,
+				1F6EF0431E04556000FF8CAA /* Insurance2TVC.swift */,
+				1FCC90CF1E080CE30062D6D9 /* dental */,
 			);
 			name = SwiftClasses;
 			sourceTree = "<group>";
@@ -3347,6 +3491,19 @@
 			name = DatePicker;
 			sourceTree = "<group>";
 		};
+		A849FA37562BD6DD5C152A7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				066F14E981E9EEAF06F10E36 /* Pods-EasyForm.debug.xcconfig */,
+				AA9F400739CABFE3001567A0 /* Pods-EasyForm.release.xcconfig */,
+				7BAF2BE39B0581157E25AC5A /* Pods-EasyFormTests.debug.xcconfig */,
+				4F52D94DF05FFF08E54E3C58 /* Pods-EasyFormTests.release.xcconfig */,
+				7C4B65593B3596FB32596504 /* Pods-EasyFormUITests.debug.xcconfig */,
+				B8CFAB22F088360619589296 /* Pods-EasyFormUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3354,13 +3511,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C546CA61CE41EA700116FAB /* Build configuration list for PBXNativeTarget "EasyForm" */;
 			buildPhases = (
-				0127C2008BD5445D3C54DE54 /* Check Pods Manifest.lock */,
+				A9555112F87DB46916F0E5DD /* [CP] Check Pods Manifest.lock */,
 				9C546C751CE41EA700116FAB /* Sources */,
 				9C546C761CE41EA700116FAB /* Frameworks */,
 				9C546C771CE41EA700116FAB /* Resources */,
-				6783F63BB990913FE161FA10 /* Embed Pods Frameworks */,
-				245376A5D3B7B64DE083750F /* Copy Pods Resources */,
 				9C56B2A71D5469A2007AADFD /* ShellScript */,
+				38D653D72218EF57F56710BB /* [CP] Embed Pods Frameworks */,
+				2C2330F128D13C0590AE7AA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3375,9 +3532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C546CA91CE41EA700116FAB /* Build configuration list for PBXNativeTarget "EasyFormTests" */;
 			buildPhases = (
+				A131B75C4D09BD6121754EB5 /* [CP] Check Pods Manifest.lock */,
 				9C546C8E1CE41EA700116FAB /* Sources */,
 				9C546C8F1CE41EA700116FAB /* Frameworks */,
 				9C546C901CE41EA700116FAB /* Resources */,
+				EF712B9174094F736B35A262 /* [CP] Embed Pods Frameworks */,
+				90E42D8536AAB01A01315ED5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3393,9 +3553,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C546CAC1CE41EA700116FAB /* Build configuration list for PBXNativeTarget "EasyFormUITests" */;
 			buildPhases = (
+				58958DE194C6D0312F5CD92E /* [CP] Check Pods Manifest.lock */,
 				9C546C991CE41EA700116FAB /* Sources */,
 				9C546C9A1CE41EA700116FAB /* Frameworks */,
 				9C546C9B1CE41EA700116FAB /* Resources */,
+				733624C48C2150E632ED891B /* [CP] Embed Pods Frameworks */,
+				D309A16C716294CBA1EE0EF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3464,15 +3627,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD88791D9DF42A0062AC5D /* WellnessRegistration.pdf in Resources */,
 				9C56B2771D512C70007AADFD /* Login.storyboard in Resources */,
 				9C546CC41CE4260F00116FAB /* OpenSans-Semibold.ttf in Resources */,
 				9C3BBCDC1D3EFA2100601920 /* complete.png in Resources */,
 				9C546CC51CE4260F00116FAB /* OpenSans-SemiboldItalic.ttf in Resources */,
-				9CBD887B1D9DF5EC0062AC5D /* Registration.pdf in Resources */,
 				9C37BCAF1D0E6241000082EF /* i2KEPCSingleComponentPickerView.xib in Resources */,
 				9C8BBBB11D05693F000F63C4 /* splashscreen.png in Resources */,
-				9CB02E111D43BA6500048C90 /* MenuViews.storyboard in Resources */,
 				9C546C8C1CE41EA700116FAB /* LaunchScreen.storyboard in Resources */,
 				9C56B27C1D512DBB007AADFD /* EVid.mp4 in Resources */,
 				9C546CC31CE4260F00116FAB /* OpenSans-Regular.ttf in Resources */,
@@ -3481,36 +3641,33 @@
 				9C3BBCD81D3EFA0600601920 /* PersonalBackground.png in Resources */,
 				9C3BBCD51D3EFA0600601920 /* DentistBackground.png in Resources */,
 				9C8BBBBF1D066460000F63C4 /* View.xib in Resources */,
+				1FD8DD541DFBB8F500878535 /* HIPAA.storyboard in Resources */,
 				9C546CE31CE5973E00116FAB /* KVNProgressView.xib in Resources */,
-				9CBD88671D9BBD410062AC5D /* testA.pdf in Resources */,
+				1FE5F4B21DFAC9A20051FBF8 /* HIRForm1.storyboard in Resources */,
 				9C546CBF1CE4260F00116FAB /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				9C3BBCD61D3EFA0600601920 /* DRbackground.png in Resources */,
 				9C85F0131DE265D1005B10AD /* Home.storyboard in Resources */,
-				9CD5AC881DAEF48C00527655 /* PowerSource.pdf in Resources */,
 				9C3BBCD91D3EFA0600601920 /* RealEstateBackground.png in Resources */,
 				9C546C891CE41EA700116FAB /* Assets.xcassets in Resources */,
 				9C546CC21CE4260F00116FAB /* OpenSans-LightItalic.ttf in Resources */,
 				9C3BBCE41D3EFA6600601920 /* MapPoint.png in Resources */,
 				9C546CBC1CE4260F00116FAB /* OpenSans-Bold.ttf in Resources */,
 				9C3BBCE21D3EFA6600601920 /* Calendar.png in Resources */,
+				1FF378051DFC6CC400145C97 /* IQKeyboardManager.bundle in Resources */,
 				9C546C871CE41EA700116FAB /* Main.storyboard in Resources */,
 				9C3BBCE31D3EFA6600601920 /* E Bubbole.png in Resources */,
 				9C85F0481DE39623005B10AD /* Menu.storyboard in Resources */,
 				9C3BBCDD1D3EFA2100601920 /* incomplete.png in Resources */,
-				9CD5AC8A1DAEF51A00527655 /* IconicImaging2.pdf in Resources */,
 				9C9063A31D3ECF0A00C93515 /* CDToilets.json in Resources */,
-				9CD5AC8C1DAF1DC300527655 /* IconicImaging.pdf in Resources */,
 				9C85F04C1DE3A4F3005B10AD /* Forms1.storyboard in Resources */,
-				9C56B2BC1D570B23007AADFD /* rahiem_protest.jpg in Resources */,
 				9C3BBCE51D3EFA6600601920 /* Phone.png in Resources */,
 				9C56B2B91D570929007AADFD /* AccordionHeaderView.xib in Resources */,
 				9C3BBCD71D3EFA0600601920 /* LawyerBackground.png in Resources */,
 				9C546CC11CE4260F00116FAB /* OpenSans-Light.ttf in Resources */,
 				9C546CBD1CE4260F00116FAB /* OpenSans-BoldItalic.ttf in Resources */,
-				9CBD883B1D98D8C40062AC5D /* testB.pdf in Resources */,
 				9C546CBE1CE4260F00116FAB /* OpenSans-ExtraBold.ttf in Resources */,
 				9C2866D01CEE938C008A898E /* Intro.storyboard in Resources */,
-				9CD5AC7A1DA7C8E900527655 /* MobileAppDiscovery.pdf in Resources */,
+				1FD8DD521DFBB8E700878535 /* MenuViews.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3531,29 +3688,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0127C2008BD5445D3C54DE54 /* Check Pods Manifest.lock */ = {
+		2C2330F128D13C0590AE7AA8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		245376A5D3B7B64DE083750F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3561,19 +3703,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6783F63BB990913FE161FA10 /* Embed Pods Frameworks */ = {
+		38D653D72218EF57F56710BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyForm/Pods-EasyForm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58958DE194C6D0312F5CD92E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		733624C48C2150E632ED891B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyFormUITests/Pods-EasyFormUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E42D8536AAB01A01315ED5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyFormTests/Pods-EasyFormTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C56B2A71D5469A2007AADFD /* ShellScript */ = {
@@ -3589,6 +3776,66 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 36c1959345582fbab7fe362cdb80175038416990 d7f343dc8a97ae689115059b9c329a80f8e6ead3e9b3f000216eb53ede767de6";
 		};
+		A131B75C4D09BD6121754EB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9555112F87DB46916F0E5DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D309A16C716294CBA1EE0EF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyFormUITests/Pods-EasyFormUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF712B9174094F736B35A262 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyFormTests/Pods-EasyFormTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3597,6 +3844,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8BBE061D082AD6000F63C4 /* ZXEncodeHints.m in Sources */,
+				1FF377F81DFC6CC400145C97 /* IQUIScrollView+Additions.m in Sources */,
 				9C8BBE391D082AD6000F63C4 /* ZXRSSExpandedFieldParser.m in Sources */,
 				9C8BBE8A1D082AD6000F63C4 /* ZXQRCodeEncoder.m in Sources */,
 				9C8BBE8D1D082AD6000F63C4 /* ZXMultiDetector.m in Sources */,
@@ -3641,6 +3889,7 @@
 				9C8BBDF11D082AD6000F63C4 /* ZXReedSolomonEncoder.m in Sources */,
 				9CC124CD1DED61CD00B22D6F /* DentalFormCompleteVC.swift in Sources */,
 				9C37BDA01D0E6544000082EF /* RACReplaySubject.m in Sources */,
+				1FD8DD561DFBB9D000878535 /* HIPAATableVC.swift in Sources */,
 				9C2866C61CEE929F008A898E /* EAIntroPage.m in Sources */,
 				9C8BBF7F1D0A95EC000F63C4 /* POPAnimator.mm in Sources */,
 				9C8BBE471D082AD6000F63C4 /* ZXCode128Reader.m in Sources */,
@@ -3651,6 +3900,7 @@
 				9C37BDC81D0E6544000082EF /* UITextField+RACSignalSupport.m in Sources */,
 				9C37BDB91D0E6544000082EF /* UIBarButtonItem+RACCommandSupport.m in Sources */,
 				9C1708431CEEA3B200BE78E9 /* RRMessageModel.m in Sources */,
+				1FE5F4B61DFACB6E0051FBF8 /* HIRTableVC.swift in Sources */,
 				9C37BD8F1D0E6544000082EF /* RACDynamicSequence.m in Sources */,
 				9C8BBDE01D082AD6000F63C4 /* ZXURIResultParser.m in Sources */,
 				9C1708621CF0879C00BE78E9 /* NSString+TextDirectionality.m in Sources */,
@@ -3669,6 +3919,7 @@
 				9C56B27A1D512D05007AADFD /* LoginVC.m in Sources */,
 				9C8BBE351D082AD6000F63C4 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				9C37BDBD1D0E6544000082EF /* UIControl+RACSignalSupportPrivate.m in Sources */,
+				1FF378041DFC6CC400145C97 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				9C85FA6B1DF554EF00CF3F06 /* ChiroComplaintsTVC.swift in Sources */,
 				9C8BBE751D082AD6000F63C4 /* ZXPDF417Reader.m in Sources */,
 				9C8BBE191D082AD6000F63C4 /* ZXDataMatrixEncoderContext.m in Sources */,
@@ -3684,9 +3935,11 @@
 				9C8BBE1F1D082AD6000F63C4 /* ZXDataMatrixX12Encoder.m in Sources */,
 				9C8BBDBA1D082AD6000F63C4 /* ZXAztecBinaryShiftToken.m in Sources */,
 				9C37BDAD1D0E6544000082EF /* RACSubscriber.m in Sources */,
+				1FF378031DFC6CC400145C97 /* IQToolbar.m in Sources */,
 				9C8BBF871D0A95EC000F63C4 /* POPPropertyAnimation.mm in Sources */,
 				9C8BBE551D082AD6000F63C4 /* ZXOneDimensionalCodeWriter.m in Sources */,
 				9C8BBDDC1D082AD6000F63C4 /* ZXTelParsedResult.m in Sources */,
+				1FF378001DFC6CC400145C97 /* IQBarButtonItem.m in Sources */,
 				9C37BD701D0E6544000082EF /* NSArray+RACSequenceAdditions.m in Sources */,
 				9C56B29D1D5148F1007AADFD /* DEMOSecondViewController.m in Sources */,
 				9C56B2C31D5A3D4B007AADFD /* MXParallaxHeader.m in Sources */,
@@ -3711,6 +3964,7 @@
 				9C8BBF811D0A95EC000F63C4 /* POPCGUtils.mm in Sources */,
 				9C8BBF7A1D0A95EC000F63C4 /* POPAnimation.mm in Sources */,
 				9CBD88391D98D6C30062AC5D /* ViewPDFController.m in Sources */,
+				1FF377FB1DFC6CC400145C97 /* IQUIViewController+Additions.m in Sources */,
 				9C546CB11CE41FA800116FAB /* HomeVC.m in Sources */,
 				9C8BBE5D1D082AD6000F63C4 /* ZXUPCEANWriter.m in Sources */,
 				9C37BD731D0E6544000082EF /* NSEnumerator+RACSequenceAdditions.m in Sources */,
@@ -3743,6 +3997,7 @@
 				9C8BBDC31D082AD6000F63C4 /* ZXAztecWriter.m in Sources */,
 				9C37BD951D0E6544000082EF /* RACEvent.m in Sources */,
 				9C37BDBA1D0E6544000082EF /* UIButton+RACCommandSupport.m in Sources */,
+				1FF378011DFC6CC400145C97 /* IQPreviousNextView.m in Sources */,
 				9C37BDAA1D0E6544000082EF /* RACStream.m in Sources */,
 				9C8BBE381D082AD6000F63C4 /* ZXRSSExpandedDecodedObject.m in Sources */,
 				9C37BDB21D0E6544000082EF /* RACTuple.m in Sources */,
@@ -3758,6 +4013,7 @@
 				9C8BBE931D082AD6000F63C4 /* ZXMultiFormatWriter.m in Sources */,
 				9C8BBE801D082AD6000F63C4 /* ZXQRCodeMode.m in Sources */,
 				9C8BBE321D082AD6000F63C4 /* ZXAnyAIDecoder.m in Sources */,
+				1F6EF0441E04556000FF8CAA /* Insurance2TVC.swift in Sources */,
 				9CBD88421D99E0790062AC5D /* NewProfileTVC.m in Sources */,
 				9C8BBE411D082AD6000F63C4 /* ZXRSSDataCharacter.m in Sources */,
 				9C8BBE251D082AD6000F63C4 /* ZXMaxiCodeReader.m in Sources */,
@@ -3765,6 +4021,7 @@
 				9C8BBDDE1D082AD6000F63C4 /* ZXTextParsedResult.m in Sources */,
 				9C37BD911D0E6544000082EF /* RACEagerSequence.m in Sources */,
 				9C8BBDD31D082AD6000F63C4 /* ZXISBNResultParser.m in Sources */,
+				1FF377FF1DFC6CC400145C97 /* IQTextView.m in Sources */,
 				9C37BDAC1D0E6544000082EF /* RACSubject.m in Sources */,
 				9C8BBE6D1D082AD6000F63C4 /* ZXPDF417DetectorResult.m in Sources */,
 				9C8BBE871D082AD6000F63C4 /* ZXQRCodeFinderPatternInfo.m in Sources */,
@@ -3775,12 +4032,14 @@
 				9C8BBE811D082AD6000F63C4 /* ZXQRCodeVersion.m in Sources */,
 				9C8BBE2F1D082AD6000F63C4 /* ZXAI01AndOtherAIs.m in Sources */,
 				9C37BD931D0E6544000082EF /* RACEmptySignal.m in Sources */,
+				1FF377FC1DFC6CC400145C97 /* IQUIWindow+Hierarchy.m in Sources */,
 				9C8BBE8C1D082AD6000F63C4 /* ZXQRCodeMatrixUtil.m in Sources */,
 				9C8BBE041D082AD6000F63C4 /* ZXDecodeHints.m in Sources */,
 				9C8BBE1E1D082AD6000F63C4 /* ZXDataMatrixTextEncoder.m in Sources */,
 				9C1708531CEEA41F00BE78E9 /* KLCPopup.m in Sources */,
 				9C37BD9D1D0E6544000082EF /* RACObjCRuntime.m in Sources */,
 				9C8BBE6A1D082AD6000F63C4 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
+				1FF377FA1DFC6CC400145C97 /* IQUIView+Hierarchy.m in Sources */,
 				9C85F0441DE2C78F005B10AD /* PKHUDErrorView.swift in Sources */,
 				9C37BD8A1D0E6544000082EF /* RACCommand.m in Sources */,
 				9C8BBE7A1D082AD6000F63C4 /* ZXQRCodeDataMask.m in Sources */,
@@ -3791,12 +4050,14 @@
 				9C09AF1A1D428D0000B96D61 /* MainViewController.m in Sources */,
 				9C37BD851D0E6544000082EF /* RACArraySequence.m in Sources */,
 				9C37BD821D0E6544000082EF /* NSString+RACSupport.m in Sources */,
+				1F6EF0421E04553E00FF8CAA /* Insurance1TVC.swift in Sources */,
 				9C37BDC51D0E6544000082EF /* UISwitch+RACSignalSupport.m in Sources */,
 				9C56B29A1D5148F1007AADFD /* DEMOHomeViewController.m in Sources */,
 				9C8BBE621D082AD6000F63C4 /* ZXPDF417BarcodeMetadata.m in Sources */,
 				9C8BBE5E1D082AD6000F63C4 /* ZXUPCEReader.m in Sources */,
 				9C8BBE081D082AD6000F63C4 /* ZXInvertedLuminanceSource.m in Sources */,
 				9C8BBE011D082AD6000F63C4 /* ZXBinarizer.m in Sources */,
+				1FE5F4B41DFACAA40051FBF8 /* HIRSelectionTVC.swift in Sources */,
 				9C37BD8B1D0E6544000082EF /* RACCompoundDisposable.m in Sources */,
 				9C37BD741D0E6544000082EF /* NSFileHandle+RACSupport.m in Sources */,
 				9C8BBE731D082AD6000F63C4 /* ZXPDF417HighLevelEncoder.m in Sources */,
@@ -3881,6 +4142,7 @@
 				9C37BD7F1D0E6544000082EF /* NSSet+RACSequenceAdditions.m in Sources */,
 				9C37BDCD1D0E66BA000082EF /* i2KEPCBasePickerView.m in Sources */,
 				9C8BBDE81D082AD6000F63C4 /* ZXCapture.m in Sources */,
+				1FF378021DFC6CC400145C97 /* IQTitleBarButtonItem.m in Sources */,
 				9C8BBE221D082AD6000F63C4 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				9C8BBE9F1D0A4FD9000F63C4 /* NYSegmentLabel.m in Sources */,
 				9C8BBE671D082AD6000F63C4 /* ZXPDF417DecodedBitStreamParser.m in Sources */,
@@ -3903,6 +4165,7 @@
 				9C8BBDD11D082AD6000F63C4 /* ZXGeoResultParser.m in Sources */,
 				9C8BBE5B1D082AD6000F63C4 /* ZXUPCEANExtensionSupport.m in Sources */,
 				9C37BDA21D0E6544000082EF /* RACScheduler.m in Sources */,
+				1FF378071DFC88B300145C97 /* DoctorQuesTVC.swift in Sources */,
 				9C8BBE511D082AD6000F63C4 /* ZXITFReader.m in Sources */,
 				9C37BD9F1D0E6544000082EF /* RACQueueScheduler.m in Sources */,
 				9C8BBDE31D082AD6000F63C4 /* ZXVEventResultParser.m in Sources */,
@@ -3914,6 +4177,7 @@
 				9C8BBE681D082AD6000F63C4 /* ZXPDF417DetectionResult.m in Sources */,
 				9C8BBE4C1D082AD6000F63C4 /* ZXEAN13Reader.m in Sources */,
 				9C37BD941D0E6544000082EF /* RACErrorSignal.m in Sources */,
+				1FF377FE1DFC6CC400145C97 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				9C8BBDEA1D082AD6000F63C4 /* ZXImage.m in Sources */,
 				9C8BBDD61D082AD6000F63C4 /* ZXProductResultParser.m in Sources */,
 				9C8BBE0B1D082AD6000F63C4 /* ZXResult.m in Sources */,
@@ -3960,6 +4224,7 @@
 				9C8BBE051D082AD6000F63C4 /* ZXDimension.m in Sources */,
 				9C37BD8D1D0E6544000082EF /* RACDelegateProxy.m in Sources */,
 				9C8BBDBF1D082AD6000F63C4 /* ZXAztecState.m in Sources */,
+				1FCC90CE1E080CD90062D6D9 /* APIManager.swift in Sources */,
 				9C8BBE441D082AD6000F63C4 /* ZXRSSUtils.m in Sources */,
 				9C37BD841D0E6544000082EF /* NSUserDefaults+RACSupport.m in Sources */,
 				9C8C11311D939FA8002A3E5A /* AWNavigationMenuItem.m in Sources */,
@@ -3973,6 +4238,7 @@
 				9C8BBDC61D082AD6000F63C4 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
 				9C8BBE9D1D0A4FD9000F63C4 /* NYSegmentedControl.m in Sources */,
 				9C37BD791D0E6544000082EF /* NSObject+RACDescription.m in Sources */,
+				1FF377F71DFC6CC400145C97 /* IQNSArray+Sort.m in Sources */,
 				9C2866CD1CEE92B0008A898E /* SMPageControl.m in Sources */,
 				9C8BBDDF1D082AD6000F63C4 /* ZXURIParsedResult.m in Sources */,
 				9C8BBE8E1D082AD6000F63C4 /* ZXMultiFinderPatternFinder.m in Sources */,
@@ -3986,6 +4252,7 @@
 				9C2208461D41B21C0043E70D /* VKSideMenu.m in Sources */,
 				9C8BBDD81D082AD6000F63C4 /* ZXSMSMMSResultParser.m in Sources */,
 				9C89272B1D66573E0004D41B /* PaymentCell.m in Sources */,
+				1F6EF0401E0452E700FF8CAA /* NewProfileTVC.swift in Sources */,
 				9C8BBDEF1D082AD6000F63C4 /* ZXGenericGFPoly.m in Sources */,
 				9C8BBE581D082AD6000F63C4 /* ZXUPCAWriter.m in Sources */,
 				9C1A9BB61D0FA13E00177285 /* UIView+MJAlertView.m in Sources */,
@@ -4046,6 +4313,7 @@
 				9C37BD921D0E6544000082EF /* RACEmptySequence.m in Sources */,
 				9C56B28B1D5148DF007AADFD /* REFrostedViewController.m in Sources */,
 				9C8BBF8A1D0A95EC000F63C4 /* TransformationMatrix.cpp in Sources */,
+				1FCC90CC1E080CB70062D6D9 /* DentalFormData.swift in Sources */,
 				9C85F0411DE2C78F005B10AD /* PKHUDTextView.swift in Sources */,
 				9C8BBE2C1D082AD6000F63C4 /* ZXAI01393xDecoder.m in Sources */,
 				9C8BBE4E1D082AD6000F63C4 /* ZXEAN8Reader.m in Sources */,
@@ -4068,7 +4336,9 @@
 				9C8BBE5C1D082AD6000F63C4 /* ZXUPCEANReader.m in Sources */,
 				9C8BBE071D082AD6000F63C4 /* ZXErrors.m in Sources */,
 				9C8BBDEC1D082AD6000F63C4 /* ZXMonochromeRectangleDetector.m in Sources */,
+				1FF377FD1DFC6CC400145C97 /* IQKeyboardManager.m in Sources */,
 				9C8BBE021D082AD6000F63C4 /* ZXBinaryBitmap.m in Sources */,
+				1FF377F91DFC6CC400145C97 /* IQUITextFieldView+Additions.m in Sources */,
 				9C37BC9D1D0C878B000082EF /* DescribeConditionVC.m in Sources */,
 				9C37BD7B1D0E6544000082EF /* NSObject+RACLifting.m in Sources */,
 				9C2691CB1D62DE0A00737EAC /* NSString+Levenshtein.m in Sources */,
@@ -4226,7 +4496,7 @@
 		};
 		9C546CA71CE41EA700116FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9128917BAD439C1A801DCCB7 /* Pods-EasyForm.debug.xcconfig */;
+			baseConfigurationReference = 066F14E981E9EEAF06F10E36 /* Pods-EasyForm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -4263,13 +4533,13 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyForm/EasyForm-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		9C546CA81CE41EA700116FAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 892AA04869D0C79B4930F0F5 /* Pods-EasyForm.release.xcconfig */;
+			baseConfigurationReference = AA9F400739CABFE3001567A0 /* Pods-EasyForm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -4305,12 +4575,13 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyForm/EasyForm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		9C546CAA1CE41EA700116FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAF2BE39B0581157E25AC5A /* Pods-EasyFormTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4324,6 +4595,7 @@
 		};
 		9C546CAB1CE41EA700116FAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F52D94DF05FFF08E54E3C58 /* Pods-EasyFormTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4337,6 +4609,7 @@
 		};
 		9C546CAD1CE41EA700116FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4B65593B3596FB32596504 /* Pods-EasyFormUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EasyFormUITests/Info.plist;
@@ -4349,6 +4622,7 @@
 		};
 		9C546CAE1CE41EA700116FAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8CFAB22F088360619589296 /* Pods-EasyFormUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EasyFormUITests/Info.plist;

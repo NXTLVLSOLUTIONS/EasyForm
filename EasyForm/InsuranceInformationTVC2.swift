@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InsuranceInformationTVC2: UITableViewController {
+class InsuranceInformationTVC2: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var saveButton2: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -28,9 +28,12 @@ class InsuranceInformationTVC2: UITableViewController {
     var areYouCoveredSelected: Bool!
     var whoIsPrimarySelected: Bool!
     var isSecondaryInsurance: Bool!
+    var datePicker : UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        insuranceDateOfBirth.delegate = self
         
         if (isSecondaryInsurance != nil){
              self.navigationItem.title = "Secondary Insurance"
@@ -210,9 +213,11 @@ class InsuranceInformationTVC2: UITableViewController {
     func saveButtonPressed(){
         
         if(isSecondaryInsurance == nil){
-            HUD.show(.progress)
+            KVNProgress.show()
+
             delay(1.0) {
-                HUD.hide()
+                KVNProgress.dismiss()
+
                 let destinationViewController = UIStoryboard(name: "Forms1", bundle: nil).instantiateViewController(withIdentifier: "InsuranceVC2") as! InsuranceInformationTVC2
                 destinationViewController.isSecondaryInsurance = true
                 self.navigationController?.show(destinationViewController, sender: self)
@@ -220,12 +225,14 @@ class InsuranceInformationTVC2: UITableViewController {
         }
         else{
             
-            HUD.show(.progress)
+            KVNProgress.show()
+
             
             // Now some long running task starts...
             delay(1.0) {
                 // ...and once it finishes we flash the HUD for a second.
-                HUD.hide()
+                KVNProgress.dismiss()
+
                // self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "goToHalfway", sender: self)
             }
@@ -247,8 +254,54 @@ class InsuranceInformationTVC2: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.insuranceDateOfBirth)
+    }
+    
+    //MARK:- Function of datePicker
+    func pickUpDate(_ textField : UITextField){
+        
+        // DatePicker
+        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker.backgroundColor = UIColor.white
+        self.datePicker.datePickerMode = UIDatePickerMode.date
+        textField.inputView = self.datePicker
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+    }
+    
+    // MARK:- Button Done and Cancel
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        dateFormatter1.timeStyle = .none
+        insuranceDateOfBirth.text = dateFormatter1.string(from: datePicker.date)
+        insuranceDateOfBirth.resignFirstResponder()
+    }
+    func cancelClick() {
+        insuranceDateOfBirth.resignFirstResponder()
+    }
+
 
 }

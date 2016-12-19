@@ -16,6 +16,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 #import <Stripe/Stripe.h>
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].toolbarManageBehaviour = IQAutoToolbarBySubviews;
+    [IQKeyboardManager sharedManager].toolbarTintColor = [UIColor colorWithRed:0.00 green:0.48 blue:1.00 alpha:1.0];
+
+    
     self.window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
     
     [Fabric with:@[[Digits class]]];
@@ -40,7 +49,7 @@
     // this for the demo app as it uses Maps.
     [GMSServices provideAPIKey:@"AIzaSyBdnKDbxIgRXzeyI_5JODJZfi10znYZtCc"];
     
-    application.statusBarHidden = YES;
+//    application.statusBarHidden = YES;
     
     [Parse setApplicationId:@"WCSaHSXAqDIXvx8kcLYEzYSn5CeD9a1fAFWgtVVL"
                   clientKey:@"75NtEvTaZci6FOgjh3mia5gRJNQWMKsPZj4pbrMI"];
@@ -58,7 +67,7 @@
     //[application setStatusBarHidden:YES];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
-        if ([PFUser currentUser] ){
+    if ([PFUser currentUser] ){
             [self setRootViewController];
         }
         else{
@@ -68,6 +77,7 @@
     if ([UIApplication sharedApplication].statusBarFrame.size.height == 40) {
         [ParseDataFormatter sharedInstance].isLaunchedFromPhoneCall = YES;
     }
+    
     
     return YES;
 }
@@ -116,7 +126,7 @@
 -(void)setRootViewController{
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"rootController"];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"contentController"];
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     

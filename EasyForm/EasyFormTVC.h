@@ -47,5 +47,6 @@
 - (IBAction)sexSegmentSelected:(id)sender;
 - (IBAction)pregnacySegmentSelected:(id)sender;
 
+-(void)showSignature;
 
 @end

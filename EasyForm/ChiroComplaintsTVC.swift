@@ -44,6 +44,12 @@ class ChiroComplaintsTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.ratePainField.keyboardType = .numberPad
+        self.ratePainField2.keyboardType = .numberPad
+        self.ratePainField3.keyboardType = .numberPad
+        self.ratePainField4.keyboardType = .numberPad
+        
         self.navigationItem.title = "Complaints"
               navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -124,6 +130,8 @@ class ChiroComplaintsTVC: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }

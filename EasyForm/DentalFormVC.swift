@@ -23,6 +23,7 @@ class DentalFormVC: UITableViewController {
     @IBOutlet weak var segmentControl: AnimatedSegmentSwitch!
     
     @IBOutlet weak var symptomsLabel: UILabel!
+    @IBOutlet weak var systemreview: UILabel!
     var conditionsArray: NSArray!
     var allergyArray: NSArray!
     var selectionInt: NSInteger!
@@ -34,6 +35,8 @@ class DentalFormVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dosageAmountTextField.keyboardType = .numberPad
         
         self.navigationItem.title = "Visit Information"
 
@@ -49,122 +52,23 @@ class DentalFormVC: UITableViewController {
         
         symptomsConditionsArray = ["Anxiety", "Confusion" , "Constipation", "Depression", "Diabetes", "Diarrhea", "Difficulty Breathing", "Digestion Problems", "Dizziness / Fainting", "Ear/Hearing Problems", "Eye/Vision Problems", "Fatigue", "Female Problems", "Hands/Feet Cold", "Heart Problems", "High Blood Pressure", "Insomnia", "Irritability", "Loss of Bladder Control", "Loss of Memory", "Low Resistance", "Nausea", "Nervousness", "Prostate Problems", "Speech Difficulty", "Sweaty Palms", "Tension", "Ulsers"]
         
-        
-        systemsConditionsArray =
-        ["Abdominal bleeding",
-        "Abdominal pain",
-        "Airway obstruction",
-        "Allergies",
-        "Alopecia",
-        "Ankle swelling",
-        "Anorexia",
-        "Anxiety",
-        "Atrophy",
-        "Belching",
-        "Blurred vision",
-        "Breast lumps/masses",
-        "Bruises",
-        "Cardiac Palpations",
-        "Changes in activity",
-        "Changes in wart or moles",
-        "Chest pain",
-        "Chills",
-        "Cramps",
-        "Depression",
-        "Discharge",
-        "Dizziness",
-        "Dyspareunia",
-        "Dyspepsia",
-        "Dyspnea",
-        "Dysuria",
-        "Endocrine Polydipsia",
-        "Enlarged glands",
-        "Epistaxis",
-        "Eruptions",
-        "Excessive lacrimation",
-        "Fatigue",
-        "Fever",
-        "Gastrointestinal Unusual diet",
-        "Genitournary Polyuria nocturia",
-        "Goiter",
-        "Gum bleeding",
-        "Hair loss",
-        "Head Trauma",
-        "Headaches",
-        "Hematemasis",
-        "Hematopoietic Anemia",
-        "Hematures",
-        "Hemoptysis",
-        "Hirsuitism",
-        "Hypertension",
-        "Incontinence",
-        "Intermittent claudication",
-        "Itching",
-        "Joint deformity",
-        "Light headed",
-        "Loss of balance",
-        "Loss of consciousness",
-        "Lumps / Swelling",
-        "Lungs Cough",
-        "Lymph node enlargement/pain",
-        "Menstruation",
-        "Mouth & Throat Ulcers",
-        "Musculoskelatal Bone/joint pain",
-        "Nail changes",
-        "Nausea",
-        "Neck Stiffness",
-        "Neurological Cranial nerve deficits",
-        "Night sweats",
-        "Nipple discharge",
-        "Nose Rhinorrhea",
-        "Numbness",
-        "Oliguria",
-        "Orthopnea",
-        "Pain with respiration",
-        "Paralysis",
-        "Parasthesia",
-        "Paroxysmal nocturnal dyspnea",
-        "Phobias",
-        "Pigmentation changes",
-        "Polyphagia",
-        "Premenstrual syndrome",
-        "Psychological Mood swings",
-        "Redness",
-        "Regurgitation",
-        "Restricted ROM",
-        "Rheumatic fever",
-        "Scotomata",
-        "Scrotal swelling",
-        "Seizures",
-        "Sexually transmitted diseases",
-        "Skin dimpling",
-        "Skin Rashes",
-        "Sore throat",
-        "Soreness",
-        "Staxis",
-        "Stool color changes",
-        "Strep throat",
-        "Swelling",
-        "Syncope",
-        "Sysphagia",
-        "Temperature intolerance",
-        "TMJ pain",
-        "Tooth pain/extractions",
-        "Tremors",
-        "Tremors",
-        "Uregency",
-        "Urine color change",
-        "Vascular Raynaud’s phenomenon",
-        "Vomiting",
-        "Weakness",
-        "Weakness",
-        "Weight changes",
-        "Wheezing"]
+        systemsConditionsArray = ["Abdominal bleeding", "Abdominal pain", "Airway obstruction", "Allergies", "Alopecia", "Ankle swelling", "Anorexia", "Anxiety", "Atrophy", "Belching", "Blurred vision", "Breast lumps/masses", "Bruises", "Cardiac Palpations", "Changes in activity", "Changes in wart or moles", "Chest pain", "Chills", "Cramps", "Depression", "Discharge", "Dizziness", "Dyspareunia", "Dyspepsia", "Dyspnea", "Dysuria", "Endocrine Polydipsia", "Enlarged glands", "Epistaxis", "Eruptions", "Excessive lacrimation", "Fatigue", "Fever", "Gastrointestinal Unusual diet", "Genitournary Polyuria nocturia", "Goiter", "Gum bleeding", "Hair loss", "Head Trauma", "Headaches", "Hematemasis", "Hematopoietic Anemia", "Hematures", "Hemoptysis", "Hirsuitism", "Hypertension", "Incontinence", "Intermittent claudication", "Itching", "Joint deformity", "Light headed", "Loss of balance", "Loss of consciousness", "Lumps / Swelling", "Lungs Cough", "Lymph node enlargement/pain", "Menstruation", "Mouth & Throat Ulcers", "Musculoskelatal Bone/joint pain", "Nail changes", "Nausea", "Neck Stiffness", "Neurological Cranial nerve deficits", "Night sweats", "Nipple discharge", "Nose Rhinorrhea", "Numbness", "Oliguria", "Orthopnea", "Pain with respiration", "Paralysis", "Parasthesia", "Paroxysmal nocturnal dyspnea", "Phobias", "Pigmentation changes", "Polyphagia", "Premenstrual syndrome", "Psychological Mood swings", "Redness", "Regurgitation", "Restricted ROM", "Rheumatic fever", "Scotomata", "Scrotal swelling", "Seizures", "Sexually transmitted diseases", "Skin dimpling", "Skin Rashes", "Sore throat", "Soreness", "Staxis", "Stool color changes", "Strep throat", "Swelling", "Syncope", "Sysphagia", "Temperature intolerance", "TMJ pain", "Tooth pain/extractions", "Tremors", "Tremors", "Uregency", "Urine color change", "Vascular Raynaud’s phenomenon", "Vomiting", "Weakness", "Weakness", "Weight changes", "Wheezing"]
         
          if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
             self.symptomsLabel.text = "Please check if you have difficulty performing any of the following"
             self.symptomsLabel.adjustsFontSizeToFitWidth = true
         }
+        
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDoctor){
+            self.symptomsLabel.text = "Please check if you have any of the following symptoms"
+            self.symptomsLabel.adjustsFontSizeToFitWidth = true
+        }
+        
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDoctor){
+            self.systemreview.text = "Please check if you have any of the following system review"
+            self.systemreview.adjustsFontSizeToFitWidth = true
+        }
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -208,6 +112,10 @@ class DentalFormVC: UITableViewController {
         if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeChiropractor){
             if section == 1 {
                 return 3
+            }
+        }else if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDoctor){
+            if section == 1 {
+                return 2
             }
         }
         else{
@@ -259,7 +167,11 @@ class DentalFormVC: UITableViewController {
     }
     
     func saveButtonPressed(){
+        if (ParseDataFormatter.sharedInstance().providerType == ProviderTypeDoctor){
+            self.performSegue(withIdentifier: "gotoDoctorQues", sender: self)
+        }else{
         self.performSegue(withIdentifier: "goToDentalForm2", sender: self)
+        }
     }
     
     
@@ -291,6 +203,8 @@ class DentalFormVC: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }
@@ -306,6 +220,15 @@ class DentalFormVC: UITableViewController {
                         selectionVC.titleString = "Chiro Checklist"
                     }
                     else if selectedRow == 1{
+                        selectionVC.selectionArray = symptomsConditionsArray
+                        selectionVC.titleString = "Symptoms"
+                    }
+                    else{
+                        selectionVC.selectionArray = systemsConditionsArray
+                        selectionVC.titleString = "Systems Review"
+                    }
+                }else if(ParseDataFormatter.sharedInstance().providerType == ProviderTypeDoctor){
+                    if selectedRow == 0{
                         selectionVC.selectionArray = symptomsConditionsArray
                         selectionVC.titleString = "Symptoms"
                     }

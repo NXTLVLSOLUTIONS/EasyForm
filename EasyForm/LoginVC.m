@@ -15,6 +15,7 @@
 #import <Parse/Parse.h>
 #import "KVNProgress.h"
 @import MediaPlayer;
+#import "RegisterVC.h"
 
 @interface LoginVC ()
 
@@ -83,10 +84,13 @@
 {
     //  [[UIApplication sharedApplication] setStatusBarHidden:NO];
     //
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Intro" bundle:nil];
-    IntroPageVC *viewController = [storyboard instantiateViewControllerWithIdentifier:@"@IntroVC"];
-    [self.navigationController showViewController:viewController sender:self];
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Intro" bundle:nil];
+//    IntroPageVC *viewController = [storyboard instantiateViewControllerWithIdentifier:@"@IntroVC"];
+//    [self.navigationController showViewController:viewController sender:self];
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    RegisterVC *viewController = [storyboard instantiateViewControllerWithIdentifier:@"@RegisterVC2"];
+    [self.navigationController showViewController:viewController sender:self];
 }
 
 -(void)loginPressed

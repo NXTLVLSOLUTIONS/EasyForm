@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ILPDFKit.h>
+#import <ILPDFKit/ILPDFDocument.h>
+#import <ILPDFKit/ILPDFKit.h>
 
 @interface ViewPDFController : ILPDFViewController
 @property (nonatomic, strong) NSData *pdfData;

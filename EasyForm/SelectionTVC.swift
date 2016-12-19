@@ -12,6 +12,9 @@ class SelectionTVC: UITableViewController {
     
     var selectionArray: NSArray! = []
     var titleString: String!
+    
+//    var selection = [Any]()
+//    var lastSelection: IndexPath!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +30,21 @@ class SelectionTVC: UITableViewController {
         self.navigationItem.title = titleString
         self.tableView.allowsMultipleSelection = true
         
-           navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+//        if(UserDefaults.standard.value(forKey: "lastSelection") != nil){
+//        
+//        }
+//        selection = [UserDefaults.standard.set((selection), forKey: "lastSelection") as Any]
+//        UserDefaults.standard.synchronize()
+
     }
     
     func doneButtonPressed(){
         self.navigationController?.popViewController(animated: true)
+//        UserDefaults.standard.value(forKey: "lastSelection")
+//        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.set((selection), forKey: "lastSelection")
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,47 +64,70 @@ class SelectionTVC: UITableViewController {
         return selectionArray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "selectionCell", for: indexPath) as! SelectionCell
         
         cell.title.text  = selectionArray .object(at: indexPath.row) as? String
 
         cell.checkImageView?.isHidden = true
-
+        
+//        let checkMarkToDisplay = UserDefaults.standard.value(forKey: "lastSelection") as! NSArray
+        
+//        print(checkMarkToDisplay)
+//        let checkmark = checkMarkToDisplay[indexPath.row]
+//        
+//        print(checkmark)
+        
+//        if (indexPath.row == checkMarkToDisplay){
+//            
+//            cell.accessoryType = .checkmark
+//        }
+//        else{
+//            cell.accessoryType = .none
+//            }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // let cell = self.collectionView?.cellForItem(at: indexPath) as! MovieCollectionViewCell
         
         let cell = tableView.cellForRow(at: indexPath)
         
         if cell!.isSelected == true
         {
-            cell!.accessoryType = UITableViewCellAccessoryType.checkmark
+//            selection.append(indexPath.row)
+            cell!.accessoryType = .checkmark
         }
         else
         {
-            cell!.accessoryType = UITableViewCellAccessoryType.none
+            cell!.accessoryType = .none
         }
+        
+//        UserDefaults.standard.set((selection), forKey: "lastSelection")
+//        UserDefaults.standard.synchronize()
+        
     }
-    
+
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        // let cell = self.collectionView?.cellForItem(at: indexPath) as! MovieCollectionViewCell
-        
+    
         let cell = tableView.cellForRow(at: indexPath)
         
         if cell!.isSelected == true
         {
-            cell!.accessoryType = UITableViewCellAccessoryType.checkmark
+//            selection.append(indexPath.row)
+            cell!.accessoryType = .checkmark
         }
         else
         {
-            cell!.accessoryType = UITableViewCellAccessoryType.none
+//            selection.remove(at:indexPath.row)
+            cell!.accessoryType = .none
         }
+        
+//        UserDefaults.standard.set((selection), forKey: "lastSelection")
+//        UserDefaults.standard.synchronize()
+        
     }
- 
+}
 
     /*
     // Override to support conditional editing of the table view.
@@ -138,4 +174,59 @@ class SelectionTVC: UITableViewController {
     }
     */
 
-}
+
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "selectionCell", for: indexPath) as! SelectionCell
+//        
+//        cell.title.text  = selectionArray .object(at: indexPath.row) as? String
+//        
+//        cell.checkImageView?.isHidden = true
+//        
+//        let checkMarkToDisplay = UserDefaults.standard.value(forKey: "lastSelection") as! Int
+//        
+//        //        if(checkMarkToDisplay == indexPath.row) {
+//        //            cell.accessoryType = .checkmark
+//        //        }
+//        //        else{
+//        ////            cell.accessoryType = .none
+//        //        }
+//        
+//        return cell
+//    }
+
+    //    var lastSelection: NSIndexPath!
+    //
+    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //
+    //        let checkMarkToDisplay = UserDefaults.standard.value(forKey: "lastSelection") as! Int
+    //        lastSelection = NSIndexPath(row: checkMarkToDisplay, section: 0)
+    //
+    //        if self.lastSelection != nil
+    //        {
+    //            self.tableView.cellForRow(at: lastSelection as IndexPath)?.accessoryType = .none
+    //        }
+    //
+    //        if indexPath.row > 0
+    //        {
+    //            self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+    //
+    //            self.lastSelection = indexPath as NSIndexPath!
+    //
+    //            self.tableView.deselectRow(at: indexPath, animated: true)
+    //        }
+    //
+    //        UserDefaults.standard.set(indexPath.row, forKey: "lastSelection")
+    //
+    ////        let cell = tableView.cellForRow(at: indexPath)
+    ////
+    ////        if cell!.isSelected == true
+    ////        {
+    ////            cell!.accessoryType = UITableViewCellAccessoryType.checkmark
+    ////        }
+    ////        else
+    ////        {
+    ////            cell!.accessoryType = UITableViewCellAccessoryType.none
+    ////        }
+    //    }
+    

@@ -11,10 +11,9 @@
 
 @interface ODSAccordionSection : NSObject
 
--(id)initWithTitle:(NSString *)sectionTitle andView:(UIView *)sectionView andImage: (UIImage*)sectionImage NS_DESIGNATED_INITIALIZER;
+-(id)initWithTitle:(NSString *)sectionTitle andView:(UIView *)sectionView NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic) UIView *view;
 @property (nonatomic) NSString *title;
-@property (nonatomic) UIImage *image;
 
 @end

@@ -230,7 +230,7 @@
 -(void) eraseButtonPressed
 {
     drawerView.drawTool = ACEDrawingToolTypeEraser;
-    //[ProgressHUD showSuccess:nil];
+//    [ProgressHUD showSuccess:nil];
 }
 
 -(void) undoDrawing

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.2.0)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Digits (2.5.0):
@@ -14,12 +15,14 @@ PODS:
   - ILPDFKit (1.0.5)
   - LGSideMenuController (1.0.10)
   - ODSAccordionView (0.4.4)
+  - Spring (1.0.3)
   - Stripe (9.0.0)
   - TSClusterMapView (2.3.2)
   - TwitterCore (2.5.0):
     - Fabric
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Crashlytics
   - Digits
   - Fabric
@@ -28,10 +31,22 @@ DEPENDENCIES:
   - ILPDFKit
   - LGSideMenuController (~> 1.0.0)
   - ODSAccordionView
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - Stripe
   - TSClusterMapView
 
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Digits: c69ee2d1a6acf728c5d159f1bd335e4882bd3225
   Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
@@ -40,8 +55,11 @@ SPEC CHECKSUMS:
   ILPDFKit: e208473cc97dd889c1cdf97711816be1ec64f8fe
   LGSideMenuController: 8682bdbd0008c1acfbce95eaf96cc3657bca5f95
   ODSAccordionView: 9635dcbd4baccaab31ef2cd689002ba4b0ffe98a
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   Stripe: 935c6deb5e96cbd29d247074bf3aa98a8438e22c
   TSClusterMapView: 672b47a64ef9fb268a9093d80ba8b85ce2ee7afc
   TwitterCore: 95c46af93112768a7983bd370d66023553601d01
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 02bd136a10e3cb95f24181479eb3e65144abbc3d
+
+COCOAPODS: 1.1.1

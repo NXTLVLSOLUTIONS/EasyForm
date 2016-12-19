@@ -25,8 +25,6 @@
 #import "ILPDFSerializer.h"
 #import <ILPDFKit/ILPDFKit.h>
 
-#define HELVETICA @"Helvetica"
-
 static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, ILPDFFormContainer *forms) {
     CGRect mediaRect = CGPDFPageGetBoxRect(CGPDFDocumentGetPage(doc,page), kCGPDFMediaBox);
     CGRect cropRect = CGPDFPageGetBoxRect(CGPDFDocumentGetPage(doc,page), kCGPDFCropBox);
@@ -171,73 +169,10 @@ static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, 
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     for (NSUInteger page = 1; page <= numberOfPages; page++) {
         renderPage(page, ctx, _document, self.forms);
-        if (page == numberOfPages) {
-            [self writeImages];
-        }
     }
     UIGraphicsEndPDFContext();
     return pageData;
 }
-
--(void)writeImages
-{
-    CGRect frame = CGRectMake(50, 730, 30, 40);
-    [self drawImage: [UIImage imageNamed:@"EasyE1"] inRect:frame];
-    [self addText:[self getTodaysDate] withFrame:CGRectMake(49, 772, 150, 50) fontSize:8.0 fontColor:[UIColor darkGrayColor] fontName:HELVETICA];
-    
-    CGRect sigFrame = CGRectMake(85, 735, 88.5, 30);
-    [self drawImage: self.signature inRect:sigFrame];
-}
-- (void)drawImage:(UIImage*)image inRect:(CGRect)rect {
-    [image drawInRect:rect];
-}
-
--(NSString*)getTodaysDate{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    [dateFormatter setDateStyle:kCFDateFormatterShortStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    
-    NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
-    
-    return dateString;
-}
-
-- (CGRect)addText:(NSString*)text withFrame:(CGRect)frame fontSize:(float)fontSize fontColor:(UIColor*)color fontName:(NSString*)fontName {
-    
-    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
-    CGSize _pageSize = CGSizeMake(612, 792);
-    
-    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    paragraphStyle.alignment = NSTextAlignmentLeft;
-    
-    NSDictionary * attributes = @{NSFontAttributeName : font,
-                                  NSParagraphStyleAttributeName : paragraphStyle,
-                                  NSForegroundColorAttributeName: color};
-    
-    CGSize stringSize = [text boundingRectWithSize:CGSizeMake(_pageSize.width - 2*20-2*20, _pageSize.height - 2*20 - 2*20)
-                                           options:NSStringDrawingUsesFontLeading
-                         |NSStringDrawingUsesLineFragmentOrigin
-                                        attributes:attributes
-                                           context:nil].size;
-    
-    float textWidth = frame.size.width;
-    if (textWidth < stringSize.width)
-        textWidth = stringSize.width;
-    if (textWidth > _pageSize.width)
-        textWidth = _pageSize.width - frame.origin.x;
-    
-    CGRect renderingRect = CGRectMake(frame.origin.x, frame.origin.y, textWidth, stringSize.height);
-    
-    [text drawInRect:renderingRect withAttributes:attributes];
-    
-    frame = CGRectMake(frame.origin.x, frame.origin.y, textWidth, stringSize.height);
-    
-    return frame;
-    
-}
-
 
 
 - (NSData *)mergedDataWithDocument:(ILPDFDocument *)docToAppend {

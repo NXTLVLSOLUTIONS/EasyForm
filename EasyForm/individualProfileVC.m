@@ -41,12 +41,14 @@
     //    postingCell.contentView.frame = postingCell.bounds;
     //    postingCell.contentView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin |UIViewAutoresizingFlexibleTopMargin |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
     
+    self.title = [[NSUserDefaults standardUserDefaults] valueForKey:@"profile_name"];
+    
     _titlesArray = @[@"FORM 1",
                      @"FORM 2",
                      @"FORM 3"];
 
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0,-60) forBarMetrics:UIBarMetricsDefault];
-    _individualProfile.layer.cornerRadius =  65;
+    _individualProfile.layer.cornerRadius =  50;
     _individualProfile.layer.masksToBounds = YES;
 
     
@@ -69,17 +71,18 @@
     if([_parseObject[@"type"] isEqualToString:@"Doctor"])
     {
         _individualBackground.image=[UIImage imageNamed:@"DRbackground"];
+        sharedSingleton.providerType = ProviderTypeDoctor;
      
     }
     if([_parseObject[@"type"] isEqualToString:@"Lawyer"])
     {
         _individualBackground.image=[UIImage imageNamed:@"LawyerBackground"];
-        
+
     }
     if([_parseObject[@"type"] isEqualToString:@"Real Estate"])
     {
         _individualBackground.image=[UIImage imageNamed:@"RealEstateBackground"];
-            }
+    }
     if([_parseObject[@"type"] isEqualToString:@"Business"])
     {
         _individualBackground.image=[UIImage imageNamed:@"PersonalBackground"];
@@ -250,11 +253,57 @@
 
 -(void)formsButtonPressed{
     
-    if ([ParseDataFormatter sharedInstance].providerType == ProviderTypeDentist || [ParseDataFormatter sharedInstance].providerType == ProviderTypeChiropractor) {
+    if ([ParseDataFormatter sharedInstance].providerType == ProviderTypeDentist || [ParseDataFormatter sharedInstance].providerType == ProviderTypeChiropractor || [ParseDataFormatter sharedInstance].providerType == ProviderTypeDoctor) {
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Forms1" bundle:nil];
-        UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
-        [self.navigationController showViewController:viewController sender:self];
+        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            
+            // Cancel button tappped do nothing.
+            
+        }]];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"New Patient Intake" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Forms1" bundle:nil];
+            UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
+            [self.navigationController showViewController:viewController sender:self];
+        }]];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"HIPAA Authorization" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HIPAA" bundle:nil];
+            UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"hipaa"];
+            [self.navigationController showViewController:viewController sender:self];
+
+        }]];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"Health Information Release" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HIRForm1" bundle:nil];
+            UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"PatientInfoVC"];
+            [self.navigationController showViewController:viewController sender:self];
+            
+        }]];
+
+        //if iPhone
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+           
+            [self presentViewController:actionSheet animated:YES completion:nil];
+        }
+        //if iPad
+        else {
+//            // Change Rect to position Popover
+//            UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:actionSheet];
+//            [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+            
+            UIPopoverPresentationController *popPresenter = [actionSheet popoverPresentationController];
+            popPresenter.sourceView = _fillOutFormsButton;
+            popPresenter.sourceRect = _fillOutFormsButton.bounds;
+            [self presentViewController:actionSheet animated:YES completion:nil];
+            
+        }
+
     }
     else{
         
