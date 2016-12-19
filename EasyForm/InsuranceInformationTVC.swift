@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InsuranceInformationTVC: UITableViewController {
+class InsuranceInformationTVC: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate {
 
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var segmentControl: AnimatedSegmentSwitch!
@@ -34,9 +34,25 @@ class InsuranceInformationTVC: UITableViewController {
     @IBOutlet weak var partyEmployerState: UITextField!
     
     var isSomeoneElseSelected: Bool!
+    var datePicker : UIDatePicker!
+    var pickerView1 = UIPickerView()
+    var pickerView2 = UIPickerView()
+    var pickOption = ["AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY", "AE", "AA", "AP"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        partyDateOfBirth.delegate = self
+        pickerView1.delegate = self
+        pickerView2.delegate = self
+        
+        self.partyState.inputView = pickerView1
+        self.partyEmployerState.inputView = pickerView2
+        
+        self.partyCellNumber.keyboardType = .numberPad
+        self.partyZipCode.keyboardType = .numberPad
+        self.partyEmployerZipCode.keyboardType = .numberPad
         
         self.navigationItem.title = "Insurance"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -164,6 +180,28 @@ class InsuranceInformationTVC: UITableViewController {
     }
     */
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return pickOption[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(partyState.isEditing){
+            partyState.text = pickOption[row]
+        }else{
+            partyEmployerState.text = pickOption[row]
+        }
+    }
+
+    
     func segmentValueDidChange(_ sender: AnimatedSegmentSwitch) {
         print("valueChanged: \(sender.selectedIndex)")
         
@@ -179,9 +217,11 @@ class InsuranceInformationTVC: UITableViewController {
     
     func saveButtonPressed(){
         
-        HUD.show(.progress)
+        KVNProgress.show()
+
         delay(1.0) {
-            HUD.hide()
+            KVNProgress.dismiss()
+
             self.performSegue(withIdentifier: "showInsurance2", sender: self)
         }
         
@@ -202,8 +242,55 @@ class InsuranceInformationTVC: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.partyDateOfBirth)
+
+    }
+    
+    //MARK:- Function of datePicker
+    func pickUpDate(_ textField : UITextField){
+        
+        // DatePicker
+        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker.backgroundColor = UIColor.white
+        self.datePicker.datePickerMode = UIDatePickerMode.date
+        textField.inputView = self.datePicker
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+    }
+    
+    // MARK:- Button Done and Cancel
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        dateFormatter1.timeStyle = .none
+        partyDateOfBirth.text = dateFormatter1.string(from: datePicker.date)
+        partyDateOfBirth.resignFirstResponder()
+    }
+    func cancelClick() {
+        partyDateOfBirth.resignFirstResponder()
+    }
+
+    
 }

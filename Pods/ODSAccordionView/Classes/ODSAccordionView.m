@@ -29,8 +29,7 @@
             ODSAccordionSectionView *sectionView =
                     [[ODSAccordionSectionView alloc] initWithTitle:currentSection.title
                                                            andView:currentSection.view
-                                                      sectionStyle:sectionStyle
-                     andImage:currentSection.image];
+                                                      sectionStyle:sectionStyle];
             [self addSection:sectionView];
         }
     }

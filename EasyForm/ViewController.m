@@ -377,19 +377,19 @@
         style.stickyHeaders = YES;
         //// style.animationDuration = 0.2;
         ///style.arrowHeight = 1;
-        
-        NSArray *sections = @[
-                              [[ODSAccordionSection alloc] initWithTitle:@"Patient Information"
-                                                                 andView: [self textView] andImage:[UIImage imageNamed:@"standing-up-man-0"]],
-                              [[ODSAccordionSection alloc] initWithTitle:@"Medical Information"
-                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"health-insurance-symbol-of-a-man-with-broken-arm"]],
-                              [[ODSAccordionSection alloc] initWithTitle:@"Current Medications"
-                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"pill-1"]],
-                              [[ODSAccordionSection alloc] initWithTitle:@"X-Rays On File"
-                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"medical-doctor-standing-beside-x-ray"]],
-                              
-                              ];
-        _accordionView = [[ODSAccordionView alloc] initWithSections:sections andSectionStyle:style];
+//        
+//        NSArray *sections = @[
+//                              [[ODSAccordionSection alloc] initWithTitle:@"Patient Information"
+//                                                                 andView: [self textView] andImage:[UIImage imageNamed:@"standing-up-man-0"]],
+//                              [[ODSAccordionSection alloc] initWithTitle:@"Medical Information"
+//                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"health-insurance-symbol-of-a-man-with-broken-arm"]],
+//                              [[ODSAccordionSection alloc] initWithTitle:@"Current Medications"
+//                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"pill-1"]],
+//                              [[ODSAccordionSection alloc] initWithTitle:@"X-Rays On File"
+//                                                                 andView: [self webView] andImage:[UIImage imageNamed:@"medical-doctor-standing-beside-x-ray"]],
+//                              
+//                              ];
+//        _accordionView = [[ODSAccordionView alloc] initWithSections:sections andSectionStyle:style];
         _accordionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         _accordionView.frame = CGRectMake(0, 0, 375, 600);
         // scroller.contentSize = contentLabel.frame.size;

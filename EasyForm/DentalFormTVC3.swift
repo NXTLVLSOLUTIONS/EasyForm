@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DentalFormTVC3: UITableViewController {
+class DentalFormTVC3: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var saveButton2: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -19,9 +19,12 @@ class DentalFormTVC3: UITableViewController {
     @IBOutlet weak var reasonTextField: UITextField!
     
     var devicessArray: NSArray!
+    var datePicker : UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateTextField.delegate = self
         
         self.navigationItem.title = "Medical History"
         
@@ -171,6 +174,8 @@ class DentalFormTVC3: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }
@@ -183,9 +188,50 @@ class DentalFormTVC3: UITableViewController {
                 selectionVC.selectionArray = devicessArray
                 selectionVC.titleString = "Select Devices Used"
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.dateTextField)
+    }
+    
+    //MARK:- Function of datePicker
+    func pickUpDate(_ textField : UITextField){
         
+        // DatePicker
+        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker.backgroundColor = UIColor.white
+        self.datePicker.datePickerMode = UIDatePickerMode.date
+        textField.inputView = self.datePicker
         
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
         
     }
+    
+    // MARK:- Button Done and Cancel
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        dateFormatter1.timeStyle = .none
+        dateTextField.text = dateFormatter1.string(from: datePicker.date)
+        dateTextField.resignFirstResponder()
+    }
+    func cancelClick() {
+        dateTextField.resignFirstResponder()
+    }
+
 
 }

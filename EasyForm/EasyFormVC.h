@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import "TSClusterMapView.h"
+#import <TSClusterMapView/TSClusterMapView.h>
 #import "VKSideMenu.h"
 #import "REFrostedViewController.h"
 #import <MessageUI/MessageUI.h>
@@ -30,5 +30,6 @@
 @property (strong, nonatomic) NSMutableArray *bathroomAnnotations;
 @property (strong, nonatomic) NSMutableArray *bathroomAnnotationsAdded;
 @property (strong, nonatomic) NSDate *startTime;
+
 @end
 

@@ -34,8 +34,13 @@
    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadPayments) name:@"reloadPayments" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(queryPayments) name: @"QueryPayments" object:nil];
+    
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
   
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     applePayEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"applepay"];
@@ -46,6 +51,8 @@
 //    UIBarButtonItem *btnCancel = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(beginEdit)];
 //    
 //    self.navigationItem.rightBarButtonItem = btnCancel;
+
+    
 }
 
 -(void)queryPayments{

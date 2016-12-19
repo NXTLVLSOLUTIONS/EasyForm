@@ -216,7 +216,7 @@
 {
     [popup dismiss:YES];
     userSignatureImage =  [self resizeImage:[signtureView getSignatureImage]];
-    document.signature = userSignatureImage;
+    //document.signature = userSignatureImage;
     
     [self showPDFFile];
    // [[ParseDataFormatter sharedInstance] saveSignatureImage:userSignatureImage];

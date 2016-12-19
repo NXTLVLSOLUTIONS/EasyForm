@@ -11,12 +11,11 @@
 
 @implementation ODSAccordionSection
 
--(id)initWithTitle:(NSString *)sectionTitle andView:(UIView *)sectionView andImage: (UIImage*)sectionImage {
+-(id)initWithTitle:(NSString *)sectionTitle andView:(UIView *)sectionView {
     self = [super init];
     if (self){
         _title = sectionTitle;
         _view = sectionView;
-        _image = sectionImage;
     }
     return self;
 }

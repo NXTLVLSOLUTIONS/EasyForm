@@ -968,28 +968,28 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     }
   
     signtureView.backgroundColor = [UIColor whiteColor];
-    [myUIViewControllerView addSubview:signtureView];
+    //[myUIViewControllerView addSubview:signtureView];
     
-    UIButton* cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [cancelButton setFrame:CGRectMake(25, 251, 75, 35)];
-    [cancelButton setTitleColor:CANCEL_RED forState:UIControlStateNormal];
-    //[cancelButton setTitleColor:[[cancelButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
-    cancelButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:15];
-    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
-    [cancelButton addTarget:self action:@selector(cancelButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [myUIViewControllerView addSubview:cancelButton];
-    
-    UIButton* doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [doneButton setFrame:CGRectMake(450, 251, 75, 35)];
-      if (![ParseDataFormatter sharedInstance].isIphone6) {
-        [doneButton setFrame:CGRectMake(425, 251, 75, 35)];
-      }
-    [doneButton setTitleColor:EASY_BLUE forState:UIControlStateNormal];
-    //[doneButton setTitleColor:[[doneButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
-    doneButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:15];
-    [doneButton setTitle:@"Done" forState:UIControlStateNormal];
-    [doneButton addTarget:self action:@selector(doneButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [myUIViewControllerView addSubview:doneButton];
+//    UIButton* cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [cancelButton setFrame:CGRectMake(25, 251, 75, 35)];
+//    [cancelButton setTitleColor:CANCEL_RED forState:UIControlStateNormal];
+//    //[cancelButton setTitleColor:[[cancelButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+//    cancelButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:15];
+//    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+//    [cancelButton addTarget:self action:@selector(cancelButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+//    [myUIViewControllerView addSubview:cancelButton];
+//    
+//    UIButton* doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [doneButton setFrame:CGRectMake(450, 251, 75, 35)];
+//      if (![ParseDataFormatter sharedInstance].isIphone6) {
+//        [doneButton setFrame:CGRectMake(425, 251, 75, 35)];
+//      }
+//    [doneButton setTitleColor:EASY_BLUE forState:UIControlStateNormal];
+//    //[doneButton setTitleColor:[[doneButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+//    doneButton.titleLabel.font = [UIFont fontWithName:@"OpenSans" size:15];
+//    [doneButton setTitle:@"Done" forState:UIControlStateNormal];
+//    [doneButton addTarget:self action:@selector(doneButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+//    [myUIViewControllerView addSubview:doneButton];
     
     myUIViewControllerView.transform = CGAffineTransformMakeRotation(M_PI_2);
     // Show in popup

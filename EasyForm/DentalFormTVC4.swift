@@ -28,6 +28,15 @@ class DentalFormTVC4: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        IQKeyboardManager.shared().isEnabled = false
+        
+        self.caffeneDrinksTextField.keyboardType = .numberPad
+        self.excerciseDaysTextField.keyboardType = .numberPad
+        self.drugsPerWeekTextField.keyboardType = .numberPad
+        self.packsTextField.keyboardType = .numberPad
+        self.drinksPerWeekTextField.keyboardType = .numberPad
+        self.secPartnersTextField.keyboardType = .numberPad
 
         self.navigationItem.title = "Lifestyle"
         
@@ -103,7 +112,7 @@ class DentalFormTVC4: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 7
     }
 
     /*
@@ -183,6 +192,8 @@ class DentalFormTVC4: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         
         return textField
     }

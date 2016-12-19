@@ -13,6 +13,7 @@ class DentalFormCompleteVC: UIViewController {
     @IBOutlet weak var checkImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var verifyButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,12 +37,16 @@ class DentalFormCompleteVC: UIViewController {
     
     
     func saveButtonPressed(){
-        HUD.flash(.success, delay: 1.0)
-        DispatchQueue.main.async(execute: {
-             //self.dismiss(animated: true, completion: nil)
-            self.navigationController?.popToRootViewController(animated: true)
-            return
-        })
+        
+        let signatureVC = SignatureVC()
+        signatureVC.showSignature()
+        
+//                HUD.flash(.success, delay: 1.0)
+//        DispatchQueue.main.async(execute: {
+//             //self.dismiss(animated: true, completion: nil)
+//            self.navigationController?.popToRootViewController(animated: true)
+//            return
+//        })
      
     }
     

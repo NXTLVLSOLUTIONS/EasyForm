@@ -8,11 +8,10 @@
 
 import UIKit
 
-class DentalForm2: UITableViewController {
+class DentalForm2: UITableViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var flossTextField: UITextField!
-    
     @IBOutlet weak var brushTextField: UITextField!
     @IBOutlet weak var lastXrayTextField: UITextField!
     @IBOutlet weak var lastExamTextField: UITextField!
@@ -26,9 +25,17 @@ class DentalForm2: UITableViewController {
     @IBOutlet weak var labelThree: UILabel!
     @IBOutlet weak var labelTwo: UILabel!
     
+    var datePicker1 : UIDatePicker!
+    var datePicker2 : UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lastExamTextField.delegate = self
+        lastXrayTextField.delegate = self
       
+        self.flossTextField.keyboardType = .numberPad
+        self.brushTextField.keyboardType = .numberPad
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -72,6 +79,11 @@ class DentalForm2: UITableViewController {
             labelOne.text = "Are you currently pregnant?"
             labelTwo.text = "Have you ever had chiropractic treatment?"
             labelThree.text = "Is your health related to a recent accident?"
+            
+            flossTextField =  setupTextField(textField: flossTextField)
+            brushTextField =  setupTextField(textField: brushTextField)
+            lastExamTextField =  setupTextField(textField: lastExamTextField)
+            lastXrayTextField =  setupTextField(textField: lastXrayTextField)
         }
         else{
             self.navigationItem.title = "Dental Questions"
@@ -186,8 +198,72 @@ class DentalForm2: UITableViewController {
         let paddingView = UIView(frame: CGRect(0, 0, 15, textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = UITextFieldViewMode.always
-        
+        textField.attributedPlaceholder = NSAttributedString(string:textField.placeholder!,attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
         return textField
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.lastXrayTextField)
+        self.pickUpDate(self.lastExamTextField)
+    }
 
+    //MARK:- Function of datePicker
+    func pickUpDate(_ textField : UITextField){
+        
+        // DatePicker
+        self.datePicker1 = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker1.backgroundColor = UIColor.white
+        self.datePicker1.datePickerMode = UIDatePickerMode.date
+        lastExamTextField.inputView = self.datePicker1
+        
+        ///
+        self.datePicker2 = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker2.backgroundColor = UIColor.white
+        self.datePicker2.datePickerMode = UIDatePickerMode.date
+        lastXrayTextField.inputView = self.datePicker2
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+        
+    }
+    
+    // MARK:- Button Done and Cancel
+    func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        dateFormatter1.timeStyle = .none
+        
+        if(lastExamTextField.isEditing){
+            lastExamTextField.text = dateFormatter1.string(from: datePicker1.date)
+            lastExamTextField.resignFirstResponder()
+        }else{
+            lastXrayTextField.text = dateFormatter1.string(from: datePicker2.date)
+            lastXrayTextField.resignFirstResponder()
+        }
+    }
+    
+    func cancelClick() {
+        
+        if(lastExamTextField.isEditing){
+            lastExamTextField.resignFirstResponder()
+        }else{
+            lastXrayTextField.resignFirstResponder()
+        }
+    }
+    
 }

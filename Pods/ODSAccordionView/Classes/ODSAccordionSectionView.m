@@ -12,7 +12,7 @@
 
 
 #define BOUNDS_KEY_PATH NSStringFromSelector(@selector(bounds))
-#define MARGIN 55
+#define MARGIN 8
 
 @implementation ODSAccordionSectionView {
     ODSAccordionSectionStyle *_sectionStyle;
@@ -22,8 +22,7 @@
 
 -(instancetype)initWithTitle:(NSString *)sectionTitle
                      andView:(UIView *)sectionView
-                sectionStyle:(ODSAccordionSectionStyle *)sectionStyle
-                     andImage:(UIImage*) sectionImage{
+                sectionStyle:(ODSAccordionSectionStyle *)sectionStyle {
     self = [super init];
     if (self) {
         _sectionStyle = sectionStyle;
@@ -31,7 +30,7 @@
         self.backgroundColor = _sectionStyle.backgroundColor;
         [self setClipsToBounds:YES];
         
-        [self makeHeader:sectionTitle withImage:sectionImage];
+        [self makeHeader:sectionTitle];
         [self addArrowIcon];
         
         [self addSubview: sectionView];
@@ -54,7 +53,7 @@
     [self layoutIfNeeded];
 }
 
--(void)makeHeader:(NSString *)sectionTitle withImage:(UIImage*) sectionImage {
+-(void)makeHeader:(NSString *)sectionTitle {
     _header = [UIButton buttonWithType:UIButtonTypeCustom];
     [_header setTitle:sectionTitle forState:UIControlStateNormal];
     [_header setTitleColor:_sectionStyle.headerTitleLabelTextColor forState:UIControlStateNormal];
@@ -62,14 +61,7 @@
     _header.backgroundColor = _sectionStyle.headerBackgroundColor;
     _header.titleLabel.font = _sectionStyle.headerTitleLabelFont;
     [_header addTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    UIImageView *eView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 12, 25, 25)];
-    eView.image =sectionImage;
-    
-    [_header addSubview:eView];
     [self addSubview:_header];
-   
 }
 
 -(void)addArrowIcon {
@@ -128,7 +120,7 @@
     if (_sectionStyle.headerStyle == ODSAccordionHeaderStyleLabelLeft){
         [_header setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         [_header setTitleEdgeInsets:UIEdgeInsetsMake(0, MARGIN, 0, 0)];
-        _arrowIcon.frame = CGRectMake(self.width - 8 - arrowSize.width, self.headerHeight / 2 - arrowSize.height / 2 ,
+        _arrowIcon.frame = CGRectMake(self.width - MARGIN - arrowSize.width, self.headerHeight / 2 - arrowSize.height / 2 ,
                                       arrowSize.width, arrowSize.height);
     } else if (_sectionStyle.headerStyle == ODSAccordionHeaderStyleLabelRight){
         [_header setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];

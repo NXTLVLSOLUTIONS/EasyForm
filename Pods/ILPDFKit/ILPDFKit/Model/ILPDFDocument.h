@@ -70,7 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) CGPDFDocumentRef document;
 
 
-@property (nonatomic, strong) UIImage *signature;
 /**---------------------------------------------------------------------------------------
  * @name Creating a ILPDFDocument
  *  ---------------------------------------------------------------------------------------

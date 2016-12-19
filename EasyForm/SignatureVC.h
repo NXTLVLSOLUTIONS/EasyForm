@@ -10,4 +10,6 @@
 
 @interface SignatureVC : UIViewController
 
+-(void)showSignature;
+
 @end
